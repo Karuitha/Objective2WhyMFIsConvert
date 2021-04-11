@@ -1,0 +1,140 @@
+"0","## Full dataset"
+"0","multinom_full <- multinom(currentlegalstatus ~ age + legal_tradition + assets + kkm + pcrdbgdp + stmktcap + gdp_growth_annual + factor(year), data = my_data)"
+"1","# weights: "
+"1"," "
+"1","155"
+"1"," ("
+"1",""
+"1","120"
+"1",""
+"1"," variable)
+"
+"1","initial  value 7696.332097 
+"
+"1","iter  10 value 6289.744509
+"
+"1","iter  20 value 5905.959039
+"
+"1","iter  30 value 5413.586642
+"
+"1","iter  40 value 5104.332297
+"
+"1","iter  50 value 5024.096287
+"
+"1","iter  60 value 4982.946197
+"
+"1","iter  70 value 4969.763220
+"
+"1","iter  80 value 4959.736750
+"
+"1","iter  90 value 4947.986107
+"
+"1","iter 100 value 4941.879887
+"
+"1","final  value 4941.879887 
+"
+"1","stopped after 100 iterations
+"
+"0","## Full dataset without cooperatives"
+"0","multinom_no_coop <- multinom(currentlegalstatus ~ age + legal_tradition + assets + kkm + pcrdbgdp + stmktcap + gdp_growth_annual + factor(year), data = (my_data %>% filter(currentlegalstatus != ""Credit Union/ Cooperative "")))"
+"1","# weights: "
+"1"," "
+"1","155"
+"1"," ("
+"1",""
+"1","120"
+"1",""
+"1"," variable)
+"
+"1","initial  value 7696.332097 
+"
+"1","iter  10 value 6289.744509
+"
+"1","iter  20 value 5905.959039
+"
+"1","iter  30 value 5413.586642
+"
+"1","iter  40 value 5104.332297
+"
+"1","iter  50 value 5024.096287
+"
+"1","iter  60 value 4982.946197
+"
+"1","iter  70 value 4969.763220
+"
+"1","iter  80 value 4959.736750
+"
+"1","iter  90 value 4947.986107
+"
+"1","iter 100 value 4941.879887
+"
+"1","final  value 4941.879887 
+"
+"1","stopped after 100 iterations
+"
+"0","## Full dataset no year effects"
+"0","multinom_full_ny <- multinom(currentlegalstatus ~ age + legal_tradition + assets + kkm + pcrdbgdp + stmktcap + gdp_growth_annual, data = my_data)"
+"1","# weights: "
+"1"," "
+"1","55"
+"1"," ("
+"1",""
+"1","40"
+"1",""
+"1"," variable)
+"
+"1","initial  value 7696.332097 
+"
+"1","iter  10 value 6310.426811
+"
+"1","iter  20 value 5974.130375
+"
+"1","iter  30 value 5477.120954
+"
+"1","iter  40 value 5200.921761
+"
+"1","iter  50 value 5064.656905
+"
+"1","iter  60 value 5054.120708
+"
+"1","iter  70 value 5053.846981
+"
+"1","iter  80 value 5053.736035
+"
+"1","final  value 5053.733840 
+"
+"1","converged
+"
+"0","## Full dataset without Cooperatives and Without year effects"
+"0","multinom_full_no_coop_ny <- multinom(currentlegalstatus ~ age + legal_tradition + assets + kkm + pcrdbgdp + stmktcap + gdp_growth_annual, data = (my_data %>% filter(currentlegalstatus != ""Credit Union/ Cooperative "")))"
+"1","# weights: "
+"1"," "
+"1","55"
+"1"," ("
+"1",""
+"1","40"
+"1",""
+"1"," variable)
+"
+"1","initial  value 7696.332097 
+"
+"1","iter  10 value 6310.426811
+"
+"1","iter  20 value 5974.130375
+"
+"1","iter  30 value 5477.120954
+"
+"1","iter  40 value 5200.921761
+"
+"1","iter  50 value 5064.656905
+"
+"1","iter  60 value 5054.120708
+"
+"1","iter  70 value 5053.846981
+"
+"1","iter  80 value 5053.736035
+"
+"1","final  value 5053.733840 
+"
+"1","converged
+"
