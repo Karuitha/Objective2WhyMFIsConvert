@@ -1,226 +1,41 @@
 "0","knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.height = 9, fig.width = 14, out.width = '8.8in', fig.align = ""center"")"
 "0",""
 "0","library(tidyverse)"
-"2","Registered S3 methods overwritten by 'dbplyr':
-  method         from
-  print.tbl_lazy     
-  print.tbl_sql      
-"
-"2","[37m── [1mAttaching packages[22m ──────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──[39m
-"
-"2","[37m[32m✓[37m [34mggplot2[37m 3.3.3     [32m✓[37m [34mpurrr  [37m 0.3.4
-[32m✓[37m [34mtibble [37m 3.1.0     [32m✓[37m [34mdplyr  [37m 1.0.5
-[32m✓[37m [34mtidyr  [37m 1.1.3     [32m✓[37m [34mstringr[37m 1.4.0
-[32m✓[37m [34mreadr  [37m 1.4.0     [32m✓[37m [34mforcats[37m 0.5.1[39m
-"
-"2","[37m── [1mConflicts[22m ─────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-[31mx[37m [34mdplyr[37m::[32mfilter()[37m masks [34mstats[37m::filter()
-[31mx[37m [34mdplyr[37m::[32mlag()[37m    masks [34mstats[37m::lag()[39m
-"
 "0","library(dtplyr)"
 "0","library(plm)"
-"2","
-Attaching package: ‘plm’
-
-"
-"2","The following objects are masked from ‘package:dplyr’:
-
-    between, lag, lead
-
-"
 "0","library(pglm)"
-"2","Loading required package: maxLik
-"
-"2","Loading required package: miscTools
-"
-"2","
-Please cite the 'maxLik' package as:
-Henningsen, Arne and Toomet, Ott (2011). maxLik: A package for maximum likelihood estimation in R. Computational Statistics 26(3), 443-458. DOI 10.1007/s00180-010-0217-1.
-
-If you have questions, suggestions, or comments regarding the 'maxLik' package, please use a forum or 'tracker' at maxLik's R-Forge site:
-https://r-forge.r-project.org/projects/maxlik/
-"
 "0","library(gmnl)"
-"2","Loading required package: Formula
-"
 "0","library(ggthemes)"
 "0","library(GGally)"
 "0","library(skimr)"
 "0","library(prettydoc)"
 "0","library(gridExtra)"
-"2","
-Attaching package: ‘gridExtra’
-
-"
-"2","The following object is masked from ‘package:dplyr’:
-
-    combine
-
-"
 "0","library(psych)"
-"2","
-Attaching package: ‘psych’
-
-"
-"2","The following objects are masked from ‘package:ggplot2’:
-
-    %+%, alpha
-
-"
 "0","library(stargazer)"
-"2","
-Please cite as: 
-
-"
-"2"," Hlavac, Marek (2018). stargazer: Well-Formatted Regression and Summary Statistics Tables.
-"
-"2"," R package version 5.2.2. https://CRAN.R-project.org/package=stargazer 
-
-"
 "0","library(corrplot)"
-"2","corrplot 0.84 loaded
-"
 "0","library(excelR)"
-"2","Registered S3 method overwritten by 'htmlwidgets':
-  method           from         
-  print.htmlwidget tools:rstudio
-"
 "0","library(bookdown)"
 "0","library(rmarkdown)"
 "0","library(gghalves)"
 "0","library(ggalt)  "
-"2","Registered S3 methods overwritten by 'ggalt':
-  method                  from   
-  grid.draw.absoluteGrob  ggplot2
-  grobHeight.absoluteGrob ggplot2
-  grobWidth.absoluteGrob  ggplot2
-  grobX.absoluteGrob      ggplot2
-  grobY.absoluteGrob      ggplot2
-"
 "0","library(ggrepel)  # for annotations"
 "0","library(viridis)  # for nice colors"
-"2","Loading required package: viridisLite
-"
 "0","library(broom)  # for cleaning up models"
 "0","library(treemapify)  # for making area graphs"
 "0","library(wesanderson)  # for nice colors"
 "0","library(janitor)"
-"2","
-Attaching package: ‘janitor’
-
-"
-"2","The following objects are masked from ‘package:stats’:
-
-    chisq.test, fisher.test
-
-"
 "0","library(readxl)"
 "0","library(magrittr)"
-"2","
-Attaching package: ‘magrittr’
-
-"
-"2","The following object is masked from ‘package:purrr’:
-
-    set_names
-
-"
-"2","The following object is masked from ‘package:tidyr’:
-
-    extract
-
-"
 "0","library(mice)"
-"2","
-Attaching package: ‘mice’
-
-"
-"2","The following object is masked from ‘package:stats’:
-
-    filter
-
-"
-"2","The following objects are masked from ‘package:base’:
-
-    cbind, rbind
-
-"
 "0","library(patchwork)"
 "0","library(Rchoice)"
-"2","
-Attaching package: ‘Rchoice’
-
-"
-"2","The following object is masked from ‘package:pglm’:
-
-    ordinal
-
-"
 "0","library(gplots)"
-"2","
-Attaching package: ‘gplots’
-
-"
-"2","The following object is masked from ‘package:stats’:
-
-    lowess
-
-"
 "0","library(margins)"
 "0","library(lme4)"
-"2","Loading required package: Matrix
-"
-"2","
-Attaching package: ‘Matrix’
-
-"
-"2","The following objects are masked from ‘package:tidyr’:
-
-    expand, pack, unpack
-
-"
-"2","Registered S3 methods overwritten by 'lme4':
-  method                          from
-  cooks.distance.influence.merMod car 
-  influence.merMod                car 
-  dfbeta.influence.merMod         car 
-  dfbetas.influence.merMod        car 
-"
 "0","library(kableExtra)"
-"2","
-Attaching package: ‘kableExtra’
-
-"
-"2","The following object is masked from ‘package:dplyr’:
-
-    group_rows
-
-"
 "0","library(caret)"
-"2","Loading required package: lattice
-"
-"2","
-Attaching package: ‘caret’
-
-"
-"2","The following object is masked from ‘package:purrr’:
-
-    lift
-
-"
 "0","library(nnet)"
 "0","library(pROC)"
-"2","Type 'citation(""pROC"")' for a citation.
-"
-"2","
-Attaching package: ‘pROC’
-
-"
-"2","The following objects are masked from ‘package:stats’:
-
-    cov, smooth, var
-
-"
 "0","library(ConfusionTableR)"
 "0",""
 "0","#########################################"

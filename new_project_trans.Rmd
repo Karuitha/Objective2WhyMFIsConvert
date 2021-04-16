@@ -1504,11 +1504,16 @@ stargazer(multinom_full_no_coop_ny, title = "Regression Results - Multinomial Lo
 legal %>% rename(Country = country, Legal_Tradition = trad) %>% 
   
   mutate(Legal_Tradition = case_when(
+    
     Legal_Tradition == "civil" ~ "Civil",
+    
     Legal_Tradition == "common" ~ "Common",
+    
     TRUE ~ "Others")) %>% 
   
   arrange(Legal_Tradition, Country) %>% 
+  
+  pivot_wider(names_from = "Legal_Tradition", values_from = "Country") %>% 
   
   kbl(., caption = "Legal Traditions in Africa", 
       
@@ -1516,11 +1521,16 @@ legal %>% rename(Country = country, Legal_Tradition = trad) %>%
   
   kable_paper(full_width = FALSE, font_size = 7) %>% 
   
+  column_spec(1:3, width = "20em") %>% 
+  
   footnote(general = "Oto-Peralías and Romero-Ávila (2014)",
            
            general_title = "Source: ",
            
-           number = c("Other legal traditions include Spanish, Portuguese, Belgian, and Italian", "Ethiopia is a peculiar case of a country in Africa that was not colonised"),
+           number = c("Other legal traditions include Spanish, Portuguese, Belgian, and Italian", 
+                      
+                      "Ethiopia is a peculiar case of a country in Africa that was not colonised"),
+           
            number_title = "Note: ")
 ```
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.16)  21 MAR 2021 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  16 APR 2021 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,32 +1067,32 @@ l.2351 \newpage
 l.2410 \newpage
                ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 2483.
+(Font)              scaled to size 7.0pt on input line 2427.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 2486.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2491.
-[39] [40pdfTeX warning (ext4): destination with the same identifier (name{table
-.21}) has been already used, duplicate ignored
+(Font)              scaled to size 5.0pt on input line 2430.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2435.
+[39pdfTeX warning (ext4): destination with the same identifier (name{table.21})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2491 \end{document}
+l.2435 \end{document}
                      ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2491.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2435.
 (./new_project_trans.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2491.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2491.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2435.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2435.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15698 strings out of 481239
- 235875 string characters out of 5920377
- 532930 words of memory out of 5000000
- 30152 multiletter control sequences out of 15000+600000
+ 15697 strings out of 481745
+ 235868 string characters out of 5930830
+ 531525 words of memory out of 5000000
+ 30003 multiletter control sequences out of 15000+600000
  714581 words of font info for 235 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 891 hyphenation exceptions out of 8191
  43i,15n,43p,1225b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
@@ -1110,10 +1110,10 @@ r6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb><
 /usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/
 public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on new_project_trans.pdf (40 pages, 6685894 bytes).
+Output written on new_project_trans.pdf (39 pages, 6685091 bytes).
 PDF statistics:
- 727 PDF objects out of 1000 (max. 8388607)
- 647 compressed objects within 7 object streams
- 247 named destinations out of 1000 (max. 500000)
+ 722 PDF objects out of 1000 (max. 8388607)
+ 643 compressed objects within 7 object streams
+ 246 named destinations out of 1000 (max. 500000)
  26954 words of extra memory for PDF output out of 29859 (max. 10000000)
 
