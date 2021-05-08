@@ -1,0 +1,18 @@
+---
+title: "Transformation of Microfinance Institutions in Africa"
+author: "John Karuitha & Kalu Ojah"
+date: "`r format(Sys.Date(), '%A, %B %d, %Y')`"
+output:
+  pdf_document: default
+  html_document: default
+always_allow_html: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+># **Abstract**
+>We examine the factors driving non-governmental organisation microfinance institutions to convert to the commercial, profit-oriented model. Using data from the World Bank and the International Monetary Fund (IMF), we ran logit, probit, and multinomial logit models with NGOs as the base outcome. At the firm level, age, size influence transformation. Legal tradition, institutional quality, and stock market development are significant factors at the country level. However, private credit to GDP and GDP growth rates are not significant drivers of conversion. Older firms are less likely to be NGOs, as are MFIs in civil law countries. Larger MFIs and MFIs located in countries with “other” legal traditions are more likely to be commercial. Institutional quality raises the chances of conversion, while stock market capitalisation relates negatively with transformation. Overall, the model does better than a null model, and the results remain robust to removing outliers.
+
+> KEY WORDS: Microfinance, Transformation, NGOs, Africa
