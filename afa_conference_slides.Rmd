@@ -1,6 +1,8 @@
 ---
-author: "_John Karuitha & Kalu Ojah (Wits University)_"
+author: "_John Karuitha & Kalu Ojah_"
 title: "**Transformation of Microfinance Institutions in Africa**"
+subtitle: |
+  ![](logo_wits.png){width=3in} 
 bibliography: citation.bib
 output: 
   revealjs::revealjs_presentation:
@@ -39,25 +41,25 @@ output:
 
 - Other researchers argue that the financial self-sufficiency of MFIs is vital for a sustainable microfinance industry. 
 
-- () highlight that donations to MFIs are influenced by the state of bilateral political relationships between donor and recipient countries. 
+- Garmaise and Natividad (2013) note that donations to MFIs are influenced by the state of bilateral political relationships between donor and recipient countries. 
 
-- Also, analysis by () shows that the level of donations and subsidies is heavily influenced by macroeconomic factors. 
+- Also, analysis by Armendariz, et al. (2013) shows that the level of donations and subsidies is volatile and heavily influenced by macroeconomic factors. 
 
-- () argues for the conversion of MFIs, noting that MFIs funded via donations and subsidies crowd out viable alternative financial intermediaries. 
+- Kota (2007) argues for the conversion of MFIs, noting that MFIs funded via donations and subsidies crowd out viable alternative financial intermediaries. 
 
 
 ## Key Research Question
 
-1. _What Drives Microfinance Institutions in Africa to Convert from NGOs to Commercial Entities?_
+_What Drives Microfinance Institutions in Africa to Convert from NGOs to Commercial Entities?_
 
 ## Theoretical link
 
-- Institutional theory: Why do organizations change over time? 
+- **Institutional theory**: Why do organizations change over time [@maggio1991; @martinez2017coercive]? 
     - The institutional environment dictates change more than market pressures.
     - Coercion is a major initiator of change. Donors may push MFIs to convert. 
     - Change in organizations may arise out of the need to conform to institutional environment. 
     
-- Agency theory: The social mission of microfinance may conflict with the profit motive of finance providers. 
+- **Agency theory**: The social mission of microfinance may conflict with the profit motive of finance providers [@jensen1976theory]. 
 
 - The potential conflict reduce motivation for transformation among socially minded donors. 
 
@@ -78,8 +80,19 @@ output:
 
 - The model is as follows; 
 
-$y = \beta_{0} + \beta_{1}X$
+$Y_{it} = \beta_{0} + \beta_{1}X_{it} + \epsilon_{it}$.
 
+for $Y_{it} = log(\frac{p_{it}}{1 - p_{it}})$.
+
+## Analysis Method
+
+$p_{it} = \frac{1}{(1 + e^{-z_{it}})}$
+
+$1 - p_{it} = \frac{1}{(1 + e^{z_{it}})}$
+
+- $p_{it}$ is the probability of an MFI changing from an NGO to any of the commercial models. 
+
+- $1 - p_{it}$ is the probability of an NGO remaining an NGO. 
 
 ## The Dependent Variable
 
@@ -87,37 +100,115 @@ $y = \beta_{0} + \beta_{1}X$
 
 - The variable has 5 distinct classes; 
 
-  - Commercial Banks, 
-  - NGOs, 
-  - Non-Bank Financial Intitutions (NBFIs), 
-  - Cooperatives, and 
-  - Rural Banks. 
+  - Cooperatives: 1427, 
+  - NBFIs: 1318, 
+  - NGO: 1280, 
+  - Commercial Banks: 619
+  - Rural Banks: 138
   
 - NGOs are the base outcome (0). The other classes take a code of 1.  
+
+## The Dependent Variable
+
+- Dependent variable breakdown
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+
+tribble(~ Legal_Status, ~ Number,
+        "NGO", "1280",
+        "Others", "3502") %>% 
+  knitr::kable(caption = "Breakdown of Legal Status of MFIs in Africa", 
+               
+               booktabs = TRUE) %>% 
+  kableExtra::kable_styling(bootstrap_options = "striped", full_width = TRUE) %>% 
+  
+  kableExtra::add_footnote(label = "The other legal forms of MFIs are cooperatives, commercial banks, non-bank financial institutions, and rural banks", notation = "symbol")
+```
+
 
 ## The Independent variables
 
 - The following are the independent variables
+- MFI Age dummy - New (0 - 4 years), Young (4 - 8 years), and Mature (Over 8 years).
+- Country Legal tradition dummy - Civil Law, Common Law, and Others. 
+- Size (the Log of assets). larger MFIs could resist pressure to transform.
+- Country-level Institutional Quality (Governance)
 
-- Age 
-- Legal tradition
-- Size (the Log of assets)
-- Institutional Quality (country level Governance)
-- Private Credit to GDP.
-- Stock Market Capitalisation to GDP. 
-- GDP Annual Growth rate. 
+## The Independent variables (continued .......) 
 
-## Exploratory data analysis
+- Private Credit to GDP (Reflects banking sector development).
+- Stock Market Capitalisation to GDP (Reflects stock market development). 
+- GDP Annual Growth rate (Macroeconomic conditions that may affect fund raising). 
 
+## The Independent variables (continued .......) 
 
+![Independent variables](presentation_shot3.png)
+
+## Exploratory data analysis.....
+
+![Presentation shot](presentation_shot.png)
+
+## Exploratory data analysis.....
+
+![Presentation shot 1](presentation_shot1.png)
 
 ## Results of the Regressions
 
+![Regression output](presentation_shot4.png)
 
+## Results of the Regressions
+    
+- The significant drivers of the chance of converting are;
+  - Age.
+  - Size.
+  - Legal tradition. 
+  - Institutional quality, and 
+  - Stock market development. 
+  
+- The following variables do not significantly drive transformation;
+
+  - Private credit to GDP.
+  - GDP growth rate. 
+  
+## Results of the Regressions
+
+- Age: Mature firms more likely to transform than new or young MFIs, likely because they have collateral, goodwill to pledge in return for capital markets funding. 
+
+
+- Size: Larger firms more likely to transform, probably because they can raise funds easily in capital markets.
+
+## Results of the Regressions
+
+- Legal tradition: MFIs in civil law countries are less likely to convert. However, those in other legal traditions are more likely to transform. 
+
+- MFIs in countries with stronger institutions are more likely to transform, likely due to ease of contract enforcement and property rights. 
+
+- Stronger stock markets correspond with lower chances of transformation. If a country has strong capital markets, it is likely to have less financial exclusion, hence low demand for microfinance. 
+
+## Results of the Regressions (Insignificant variables)
+- Stronger private credit markets correspond with lower chances of transformation. 
+
+- Like for stock markets, if a country has strong credit markets, it is likely to have less financial exclusion, hence low demand for microfinance. 
 
 
 ## Robustness tests
 
+- We ran the following robustness checks;
 
+  - We removed outliers and ran the logit and probit models. 
+
+  - We also ran multinomial logit model. 
+
+  - Checked for multicollinearity and linearity of variables. 
 
 ## Conclusion
+
+- Age and size are the key drivers of MFIs transformation.
+
+- Legal tradition, institutional quality, and stock market capitalisation also influence transformation. 
+
+- Policy targeting small MFIs to have ample quality assets would enhance the chances of transformation. 
+
+## Selected References
