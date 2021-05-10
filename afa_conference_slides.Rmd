@@ -1,0 +1,123 @@
+---
+author: "_John Karuitha & Kalu Ojah (Wits University)_"
+title: "**Transformation of Microfinance Institutions in Africa**"
+bibliography: citation.bib
+output: 
+  revealjs::revealjs_presentation:
+    theme: blood
+    highlight: pygments
+    transition: zoom
+---
+
+## Background.
+
+- For several decades academic researchers and development practitioners have hailed `microfinance` as a key piece in resolving financial exclusion and reducing poverty worldwide.
+
+- Traditionally, `Microfinance Institutions (MFIs)` have operated as non-profit Non-Governmental Organizations (NGOs). 
+
+- These NGOs-type MFIs have focused chiefly on availing financial services to the financially excluded like women, rural dwellers, and the youth.
+
+## Background: The Paradigm Shift to Profits.
+
+- However, MFIs are shifting from the NGO, not-for-profit model of microfinance to the commercial, profit-oriented model. 
+
+- The shift has especially gained pace with the rise of neo-liberalism after the cold war. 
+
+- Neo-liberalism emphasizes financial sustainability of economic entities, as opposed to reliance on donations and state subsidies, the logic behind SAPs. 
+
+## Background: Is the Transformation of MFIs that Bad?
+
+- The key concern regarding the paradigm shift is "Mission drift".
+
+- Mission drift refers to a scenario where profit-oriented MFIs pay less attention to their social mission of availing financial services to the financially excluded. 
+
+- Instead, profit-maximization takes centre stage. 
+
+- Other researchers argue that focus on profits may `erode the legitimacy` of the microfinance industry, making it hard to attract donations and subsidies. 
+
+## Background: Maybe the Conversion of MFIs is Good!
+
+- Other researchers argue that the financial self-sufficiency of MFIs is vital for a sustainable microfinance industry. 
+
+- () highlight that donations to MFIs are influenced by the state of bilateral political relationships between donor and recipient countries. 
+
+- Also, analysis by () shows that the level of donations and subsidies is heavily influenced by macroeconomic factors. 
+
+- () argues for the conversion of MFIs, noting that MFIs funded via donations and subsidies crowd out viable alternative financial intermediaries. 
+
+
+## Key Research Question
+
+1. _What Drives Microfinance Institutions in Africa to Convert from NGOs to Commercial Entities?_
+
+## Theoretical link
+
+- Institutional theory: Why do organizations change over time? 
+    - The institutional environment dictates change more than market pressures.
+    - Coercion is a major initiator of change. Donors may push MFIs to convert. 
+    - Change in organizations may arise out of the need to conform to institutional environment. 
+    
+- Agency theory: The social mission of microfinance may conflict with the profit motive of finance providers. 
+
+- The potential conflict reduce motivation for transformation among socially minded donors. 
+
+
+## Data and variables
+
+- We source panel data from the World Bank's MIX market for 705 MFIs operating in 40 African countries. 
+
+- Additional data is from the World Development Indicators (WDI) and the Worldwide Governance Indicators (WGI) World Bank Databases. 
+
+- The panels are unbalanced. 
+
+## Analysis Method
+
+- We run mixed effects logit and probit models with NGO type MFIs as the base outcome. 
+
+- We also incorporate time dummies. 
+
+- The model is as follows; 
+
+$y = \beta_{0} + \beta_{1}X$
+
+
+## The Dependent Variable
+
+- The current legal status of an MFI is the dependent variable. 
+
+- The variable has 5 distinct classes; 
+
+  - Commercial Banks, 
+  - NGOs, 
+  - Non-Bank Financial Intitutions (NBFIs), 
+  - Cooperatives, and 
+  - Rural Banks. 
+  
+- NGOs are the base outcome (0). The other classes take a code of 1.  
+
+## The Independent variables
+
+- The following are the independent variables
+
+- Age 
+- Legal tradition
+- Size (the Log of assets)
+- Institutional Quality (country level Governance)
+- Private Credit to GDP.
+- Stock Market Capitalisation to GDP. 
+- GDP Annual Growth rate. 
+
+## Exploratory data analysis
+
+
+
+## Results of the Regressions
+
+
+
+
+## Robustness tests
+
+
+
+## Conclusion
