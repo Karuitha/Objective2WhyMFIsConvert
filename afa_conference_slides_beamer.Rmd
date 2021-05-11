@@ -1,15 +1,18 @@
 ---
+title: '**Transformation of Microfinance Institutions in Africa**'
 author: "_John Karuitha & Kalu Ojah_"
-title: "**Transformation of Microfinance Institutions in Africa**"
 subtitle: |
   ![](logo_wits.png){width=3in} 
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+  ioslides_presentation: default
 bibliography: citation.bib
-output: 
-  revealjs::revealjs_presentation:
-    theme: sky
-    highlight: pygments
-    transition: zoom
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
 
 ## Background.
 
@@ -58,8 +61,6 @@ _What Drives Microfinance Institutions in Africa to Convert from NGOs to Commerc
     - The institutional environment dictates change more than market pressures.
     - Coercion is a major initiator of change. Donors may push MFIs to convert. 
     - Change in organizations may arise out of the need to conform to institutional environment. 
-    
-## Theoretical link
     
 - **Agency theory**: The social mission of microfinance may conflict with the profit motive of finance providers [@jensen1976theory]. 
 
@@ -124,7 +125,7 @@ tribble(~ Legal_Status, ~ Number,
   knitr::kable(caption = "Breakdown of Legal Status of MFIs in Africa", 
                
                booktabs = TRUE) %>% 
-  kableExtra::kable_styling(bootstrap_options = "striped", full_width = TRUE) %>% 
+  kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE) %>% 
   
   kableExtra::add_footnote(label = "The other legal forms of MFIs are cooperatives, commercial banks, non-bank financial institutions, and rural banks", notation = "symbol")
 ```
