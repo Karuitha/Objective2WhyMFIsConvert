@@ -13,9 +13,9 @@ output:
 
 ## Background.
 
-- For several decades academic researchers and development practitioners have hailed `microfinance` as a key piece in resolving financial exclusion and reducing poverty worldwide.
+- Microfinance is a key piece in resolving financial exclusion and reducing poverty worldwide.
 
-- Traditionally, `Microfinance Institutions (MFIs)` have operated as non-profit Non-Governmental Organizations (NGOs). 
+- Traditionally, `Microfinance Institutions (MFIs)` have operated as non-profit Non-Governmental Organizations (NGOs), more so in low income countries. 
 
 - These NGOs-type MFIs have focused chiefly on availing financial services to the financially excluded like women, rural dwellers, and the youth.
 
@@ -31,17 +31,19 @@ output:
 
 - The key concern regarding the paradigm shift is "Mission drift".
 
-- Mission drift refers to a scenario where profit-oriented MFIs pay less attention to their social mission of availing financial services to the financially excluded. 
+- Mission drift happens when profit-oriented MFIs pay less attention to their social mission of availing financial services to the financially excluded. 
 
 - Instead, profit-maximization takes centre stage. 
 
-- Other researchers argue that focus on profits may `erode the legitimacy` of the microfinance industry, making it hard to attract donations and subsidies. 
+- Researchers argue that mission drift may `erode the legitimacy` of the microfinance industry, making it harder to attract donations and subsidies. 
 
 ## Background: Maybe the Conversion of MFIs is Good!
 
 - Other researchers argue that the financial self-sufficiency of MFIs is vital for a sustainable microfinance industry. 
 
 - Garmaise and Natividad (2013) note that donations to MFIs are influenced by the state of bilateral political relationships between donor and recipient countries. 
+
+## Background: Maybe the Conversion of MFIs is Good!
 
 - Also, analysis by Armendariz, et al. (2013) shows that the level of donations and subsidies is volatile and heavily influenced by macroeconomic factors. 
 
@@ -51,6 +53,8 @@ output:
 ## Key Research Question
 
 _What Drives Microfinance Institutions in Africa to Convert from NGOs to Commercial Entities?_
+
+- Much of the extant literature examines mission drift: whether the conversion of MFIs affects their outreach to the financially excluded as they pursue profits. 
 
 ## Theoretical link
 
@@ -72,7 +76,7 @@ _What Drives Microfinance Institutions in Africa to Convert from NGOs to Commerc
 
 - Additional data is from the World Development Indicators (WDI) and the Worldwide Governance Indicators (WGI) World Bank Databases. 
 
-- The panels are unbalanced. 
+- We use unbalanced panel data. 
 
 ## Analysis Method
 
