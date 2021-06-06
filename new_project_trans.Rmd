@@ -771,7 +771,7 @@ Categorical variables summarised in Table 2 have no missing values. There are 1,
 Table 4 and Table 7 shows that NGOs, NBFIs, and commercial banks dominate common law countries. In civil law countries, it is cooperatives, NGOs, and NFIs that are most prevalent. In other legal traditions, it is NBFIs and credit unions that dominate. The result could indicate that the relatively well-developed capital markets in common law countries allow private, for-profit MFIs to thrive while not displacing NGOs. It means that NGOs in common law countries mostly serve niche markets where commercial MFIs find it uneconomical to reach. Weak capital markets in civil law countries mean that cooperatives are central, with NGOs playing a significant role. Commercial MFIs like commercial banks and cooperatives presence is low due to capital constraints. Turning to age in Table 5, most of the mature MFIs in the sample data are cooperatives, NGOs, and commercial banks in that order, while most of the new MFIs are NBFIs, cooperatives and commercial banks, respectively. The results could indicate the increasing acceptance of the commercial model with newer MFIs going commercial. Table 6 shows the correlation between age and size, with larger MFIs more likely to be older. 
 
 ```{r}
-my_data$dummy <- factor(my_data$dummy)
+my_data$dummy <- factor(my_data$dummy, labels = c("ngo", "other"))
 levels(my_data$dummy)
 
 ## Summary statistics for factor variables 
@@ -1192,7 +1192,7 @@ my_tidy_logit <- logit_model %>% fit(dummy ~ age + legal_tradition +
 
 my_data <- my_tidy_logit %>% predict(type = "class", new_data = my_data) %>% bind_cols(my_data)
 
-tidy_conf_mat <- my_data %>%  conf_mat(truth = dummy, estimate = .pred_class)
+tidy_conf_mat <- my_data %>% conf_mat(truth = dummy, estimate = .pred_class)
 
 ###############################################################################
 
@@ -1230,9 +1230,9 @@ tidy_conf_mat %>% autoplot(type = "mosaic")
 ```{r}
 my_data <- my_tidy_logit %>% predict(type = "prob", new_data = my_data) %>% bind_cols(my_data)
 
-my_data %>% roc_auc(truth = dummy, .pred_0)
+my_data %>% roc_auc(truth = dummy, .pred_ngo)
 
-my_data %>% roc_curve(truth = dummy, .pred_0) %>% autoplot()
+my_data %>% roc_curve(truth = dummy, .pred_ngo) %>% autoplot()
 ```
 
 
