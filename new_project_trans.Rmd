@@ -67,7 +67,7 @@ library(kableExtra)
 library(caret)
 library(nnet)
 library(pROC)
-library(ConfusionTableR)
+#library(ConfusionTableR)#
 
 #########################################
 options(digits = 3)
@@ -771,6 +771,9 @@ Categorical variables summarised in Table 2 have no missing values. There are 1,
 Table 4 and Table 7 shows that NGOs, NBFIs, and commercial banks dominate common law countries. In civil law countries, it is cooperatives, NGOs, and NFIs that are most prevalent. In other legal traditions, it is NBFIs and credit unions that dominate. The result could indicate that the relatively well-developed capital markets in common law countries allow private, for-profit MFIs to thrive while not displacing NGOs. It means that NGOs in common law countries mostly serve niche markets where commercial MFIs find it uneconomical to reach. Weak capital markets in civil law countries mean that cooperatives are central, with NGOs playing a significant role. Commercial MFIs like commercial banks and cooperatives presence is low due to capital constraints. Turning to age in Table 5, most of the mature MFIs in the sample data are cooperatives, NGOs, and commercial banks in that order, while most of the new MFIs are NBFIs, cooperatives and commercial banks, respectively. The results could indicate the increasing acceptance of the commercial model with newer MFIs going commercial. Table 6 shows the correlation between age and size, with larger MFIs more likely to be older. 
 
 ```{r}
+my_data$dummy <- factor(my_data$dummy)
+levels(my_data$dummy)
+
 ## Summary statistics for factor variables 
 my_data %>% 
   
@@ -1131,6 +1134,14 @@ c("Data", "Full", "Full", ">3yrs", ">3yrs", ">5yrs", ">5yrs", "Full", "Full")))
 
 \newpage
 
+```{r}
+library(tidymodels)
+logit_model <- logistic_reg() %>% 
+  set_engine("glm") %>% 
+  set_mode("classification")
+```
+
+
 ## Multinomial Logit Model
 We extend the analysis to the multinomial logit model. The results are presented in the tables in Appendix 2 to Appendix 5. As in the binary models, the results confirm the factors that drive the conversion of MFIs from NGOs to commercial models. We examine for each variable the interpretation from the model basing our discussion on the results in Appendix 2, which easily generalises to the other Tables in the series. The results show that as the MFI transitions from being new to young, it is less likely to be a bank, NBFI, credit union, or rural bank due to the coefficients' negative sign. Hence, older firms are more likely NGOs in line with the logit model for reasons expounded in the logit model's output.
 
@@ -1168,68 +1179,30 @@ To assess the overall model fit, we generate the `confusion matrix`. For this pu
 ### Logit Model
 Overall, the models are highly significant (at 1% significance levels, see Table 11), meaning that they explain why MFIs tend to adopt to given model better than guessing the most prevalent outcome- every MFI in the sample is not an NGO. In the first row of Table 12, we see that the logit model predicted correctly that 304 NGOs were NGOs. The model also accurately predicts that an MFI belongs to other legal forms (Bank, NBFI, Coop, Rural Bank) when they belong to these forms. However, the model fails by predicting 976 cases of MFIs as other legal forms when they are NGOs. Similarly, the model wrongly classifies 126 cases of MFIs of other legal forms as NGOs.  
 
-Overall, the logit model accurately predicts the legal status of an MFI 77% of the time ^[The accuracy is computed as (304 + 3376) / (304 + 976 + 126 + 3376) = 0.77]. The prediction is within the confidence interval captured by the entries `AccuracyLower` and `AccuracyUpper`. If we were to guess that every MFI in the dataset follows the commercial model (that is, not an NGO), we would be accurate 73.2% of the time (referred to as the No Information Rate (NIR) in the `confusion matrix`) [@cavalin2018confusion]. The p-value shows that the accuracy is not due to chance with over 99% confidence, meaning that the accuracy is significantly greater than the NIR [@kleinbaum2002logistic]. 
+Overall, the logit model accurately predicts the legal status of an MFI 77% of the time ^[The accuracy is computed as (304 + 3376)/(304 + 976 + 126 + 3376) = 0.77]. The prediction is within the confidence interval captured by the entries `AccuracyLower` and `AccuracyUpper`. If we were to guess that every MFI in the dataset follows the commercial model (that is, not an NGO), we would be accurate 73.2% of the time (referred to as the No Information Rate (NIR) in the `confusion matrix`) [@cavalin2018confusion]. The p-value shows that the accuracy is not due to chance with over 99% confidence, meaning that the accuracy is significantly greater than the NIR [@kleinbaum2002logistic]. 
 
 The model has low `sensitivity`, though, at 23.75%. In this case, sensitivity is a model's ability to accurately predict that an MFI is an NGO when it is an NGO [@marom2010using]. The low `sensitivity` could, in part, be due to the low `prevalence` of NGOs in the dataset (at 26.77%) relative to the commercial forms of MFIs (73.23%). However, the model has very high `specificity` at 96.4%. Specificity is the capacity of the model to predict that an MFI follows the commercial model (NOT an NGO) when it following the commercial model (is NOT an NGO) [@zeng2020confusion]. Hence, it appears that commercial MFIs have distinct characters that easily allow the model to distinguish them from NGOs. The other metric of interest is the `balanced accuracy` that averages `sensitivity` and `specificity` at 60% [@gorzalczany2016multi]. Overall, the model does better than guessing that every MFI in the sample dataset follows the commercial model (or is NOT an NGO) [@hosmer2013applied]. 
 
 
 ```{r}
-prediction <- predict(logit_full, type = "response") %>% 
-  
-  tibble()
-  
-names(prediction) <- "prob"
+############################################################
+my_tidy_logit <- logit_model %>% fit(dummy ~ age + legal_tradition + 
+       assets + kkm + pcrdbgdp + stmktcap + gdp_growth_annual + factor(year), 
+       data = my_data)
 
-prediction <- prediction %>% 
-  
-mutate(class = case_when(prob >= 0.5 ~ "others", 
-                         TRUE ~ "NGO")) 
-  
-prediction$class <- factor(prediction$class, levels = levels(my_data$currentlegaldummy))
+my_data <- my_tidy_logit %>% predict(type = "class", new_data = my_data) %>% bind_cols(my_data)
 
-#### Confusion matrix names
-conf_names <- confusionMatrix(prediction$class, my_data$currentlegaldummy) %>% 
-  
-  ConfusionTableR::binary_class_cm() %>% 
-  
-  select(-cm_ts) %>% 
-  
-  rename(NoInformationRate = AccuracyNull) %>% 
-  
-  t() %>% rownames() %>% 
-  
-  tibble()
+tidy_conf_mat <- my_data %>%  conf_mat(truth = dummy, estimate = .pred_class)
 
-names(conf_names) <- "Description"
+###############################################################################
 
-## Confusion matrix numbers
-conf_numbers <- confusionMatrix(prediction$class, my_data$currentlegaldummy) %>% 
-  
-  ConfusionTableR::binary_class_cm() %>% 
-  
-  select(-cm_ts) %>% 
-  
-  t() %>% 
-  
-  sprintf("%.3f", .) %>% 
-  
-  tibble()
+tidy_conf_mat
 
-names(conf_numbers) <- "Value"
-#print(confusionMatrix(prediction$class, data$currentlegaldummy), 
-      #mode = "everything", digits = 2, printstats = TRUE)
-
-table <- cbind(conf_names, conf_numbers) 
-
-#colnames(table) <- c("Description", "Value")
-
-head(table, 22) %>% 
-  
-  kbl(., caption = "Confusion Matrix and Statistics for the Logit Model", 
+tidy_conf_mat %>% summary() %>% kbl(., caption = "Confusion Matrix and Statistics for the Logit Model", 
       
       booktabs = TRUE) %>% 
   
-  kable_paper(full_width = FALSE) %>% 
+  kable_paper(full_width = TRUE) %>% 
   
   footnote(general = "Authors' construction",
            
@@ -1238,8 +1211,34 @@ head(table, 22) %>%
            number = "Accuracy > NoInformationRate is significant at 1% confidence level, p = 0.0000",
   
   number_title = "Notes: ")
+
+################################################################
+  
 ```
 
+
+
+\newpage
+\blandscape
+
+```{r}
+tidy_conf_mat %>% autoplot(type = "mosaic") 
+```
+
+\newpage
+
+```{r}
+my_data <- my_tidy_logit %>% predict(type = "prob", new_data = my_data) %>% bind_cols(my_data)
+
+my_data %>% roc_auc(truth = dummy, .pred_0)
+
+my_data %>% roc_curve(truth = dummy, .pred_0) %>% autoplot()
+```
+
+
+
+\elandscape
+\newpage
 ### Multinomial Logit Model
 As noted, I develop the `confusion matrix` using the `multinomial logit` with the full data (Table 13). The matrix shows that the overall `accuracy` is 56.5%. Note that the overall accuracy is one value for the entire model, the `No Information Rate (NIR)`. Overall `accuracy`, in this case, is the ability to accurately predict that an MFI is an NGO when it is an NGO, a commercial bank when it is a commercial bank, and so on. If we were to guess that every MFI in the model is the cooperative - the most prevalent legal form- we would be right 39.3% of the time, the NIR. The p-value shows that the overall `accuracy` metric is significantly different from the `NIR`. Although the multinomial logit model has a markedly lower accuracy than the logit model, it has a far more demanding task of distinguishing 5 legal forms of MFIs instead of 2 for the logit model [@kwak2002multinomial]. 
 
@@ -1322,14 +1321,14 @@ remove_outliers <- function(x, na.rm = TRUE, ...) {
 }
 
 
-data_wins <- sapply(my_data[,10:16], remove_outliers) %>% 
+data_wins <- sapply(my_data[,c("assets", "kkm", "pcrdbgdp", "stmktcap", "gdp_growth_annual")], remove_outliers) %>% 
   
-  cbind(my_data[,c(1:9, 17, 18)]) %>% 
+  cbind(my_data[,c("mfiid", "mfiname", "year", "country", "currentlegaldummy", 
+"currentlegalstatus", "age", "legal_tradition", "region", "dummy", "count")]) %>% 
   
   na.omit() %>% 
   
   relocate(mfiid:count)
-
 ```
 
 ```{r}

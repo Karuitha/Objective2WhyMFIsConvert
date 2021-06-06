@@ -36,7 +36,7 @@
 "0","library(caret)"
 "0","library(nnet)"
 "0","library(pROC)"
-"0","library(ConfusionTableR)"
+"0","#library(ConfusionTableR)#"
 "0",""
 "0","#########################################"
 "0","options(digits = 3)"
