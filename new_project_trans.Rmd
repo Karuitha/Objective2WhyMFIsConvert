@@ -13,8 +13,9 @@ header-includes:
 mainfont: garamond
 output:
   pdf_document:
-    toc: yes
+    toc: false
     toc_depth: 4
+    number_sections: true
   prettydoc::html_pretty:
     theme: hpstr
   word_document: default
@@ -77,51 +78,52 @@ theme_set(ggthemes::theme_clean())
 
 \newpage
 
-># **Abstract**
+>**Abstract**
+
 >We examine the factors driving non-governmental organisation microfinance institutions to convert to the commercial, profit-oriented model. Using data from the World Bank and the International Monetary Fund (IMF), we ran logit, probit, and multinomial logit models with NGOs as the base outcome. At the firm level, age, and size influence transformation whereas legal tradition, institutional quality, and stock market development are significant factors at the country level. Older firms are less likely to be NGOs, as are MFIs in civil law countries. Larger MFIs and MFIs located in countries with “other” legal traditions are more likely to be of the commercial model. Institutional quality raises the chances of conversion, while stock market capitalisation relates negatively with transformation. Overall, the model does better than a null model, and the results remain robust to removing outliers and other checks.
 
-\newpage
-
 # **Background**
-The modern micro-finance (MF) industry draws its popularity from the promise of providing appropriate and affordable financial services to the population under-served by mainstream financial intermediaries [@morduch1999microfinance; @morduch2000microfinance]. The motivation for reaching out to the unbanked draws from researchers and development practitioners' view that financial inclusion leads to welfare improvements for the recipients.  As examples, some scholars associate access to finance with more business start-ups, higher savings rate, improved health, less child mortality, and higher education attainment by the poor, although some scholars downplay these findings [@klapper2015role; @o2017systematic; @shahriar2017lender]. Much of the initial efforts to provide financial services to the unbanked rested on Microfinance. Microfinance refers to either the practice of delivering appropriate and affordable financial facilities to the financially excluded or the providers of such services [@ledgerwood2006transforming]. 
+The modern micro-finance (MF) industry draws its popularity from the promise of providing appropriate and affordable financial services to the population under-served by mainstream financial intermediaries [@morduch1999microfinance; @morduch2000microfinance]. The motivation for reaching out to the unbanked draws from researchers and development practitioners' view that financial inclusion leads to welfare improvements for the recipients.  As examples, some scholars associate access to finance with more business start-ups, higher savings rate, improved health, less child mortality, and higher education attainment by the poor, although some scholars downplay these findings [@klapper2015role; @o2017systematic; @shahriar2017lender]. Much of the initial efforts to provide financial services to the unbanked rested on Microfinance. Microfinance refers to either the practice of delivering appropriate and affordable financial facilities to the financially excluded or the providers of such micro and small denomination financial services [@ledgerwood2006transforming]. 
 
-Pioneer Microfinance Institutions (MFIs), like Grameen Bank, mostly operated as Non-Governmental Organisations (NGOs) following the welfare approach, where the profitability of the institution played second to availing financial services to the poor [@chahine2010social; @d2017ngos].  However, the paradigm shift is towards the financial systems approach where MFIs operate under market principles, leading to charges of "financialisation" of poverty [@mader2015financialization], with the relatively higher interest rates charged to the clients equated to a "poverty penalty" [@chen2017microfinance]. Some scholars and practitioners argue that MFIs following the profit-oriented financial systems model, though more financially sustainable, are subject to "mission drift". Mission drift refers to situations where MFIs lessens their commitment to availing financial services to the financially excluded to pursue profits [@jia2016commercialization; @mia2017mission]. 
+Pioneer Microfinance Institutions (MFIs), like Grameen Bank, mostly operated as Non-Governmental Organisations (NGOs), following the welfare approach, where the profitability of the institution played second role to availing financial services to the poor [@chahine2010social; @d2017ngos].  However, the paradigm shift is towards the financial systems approach where MFIs operate under commercial principles, leading to charges of "financialisation" of poverty [@mader2015financialization], with the relatively higher interest rates charged to the clients equated to a "poverty penalty" [@chen2017microfinance]. Some scholars and practitioners argue that MFIs following the profit-oriented commercial model, though more financially sustainable, are subject to "mission drift". Mission drift refers to situations where MFIs lessens their commitment to availing financial services to the financially excluded to pursue profits [@jia2016commercialization; @mia2017mission]. 
 
-However, given the social mission inherent in MF, MFIs following the financial systems approach risk their legitimacy in society and local and international donor community, a significant source of funding even for commercial MFIs [@nason2018behavioral]. For these reasons, some researchers and development practitioners vouch for the welfare approach, where MFIs focus primarily on the mission to reach the financially excluded without emphasizing profits. Most MFIs following the welfare approach are non-governmental organizations (NGOs). Though not subject to mission drift, the NGO model is over-reliant on volatile local and international donor funds and government subsidies [@garmaise2013cheap; @d2017aid]. Additionally, NGOs may crowd out the efficient, market-based microfinance providers  [@kota2007], which may hurt aggregate welfare in the long run.
+However, given the social mission inherent in MF, MFIs following the financial systems approach risk their legitimacy in society and local and international donor community, a significant source of funding even for commercial MFIs [@nason2018behavioral]. For these reasons, some researchers and development practitioners vouch for the welfare approach, where MFIs focus primarily on the mission to reach the financially excluded without emphasizing profits. Most MFIs following the welfare approach are non-governmental organizations (NGOs). Though not subject to mission drift, the NGO model is over-reliant on volatile local and international donor funds and government subsidies [@garmaise2013cheap; @d2017aid]. Additionally, NGOs may crowd out the efficient, commercial-oriented microfinance providers  [@kota2007], which may hurt aggregate welfare in the long run.
 
-The win-win school attempts to reconcile the financial systems and welfare approach to microfinance. Adherents of the win-win school postulate that it is possible to achieve both financial sustainability (that is, turn a profit) and, at the same time, reach the financially excluded [@kodongo2013individual]. As a case in point, some researchers argue that MFIs could strive to generate profits by offering financial services to the relatively well-off at market rates. The MFIs could then use the returns to subsidise the provision of financial services to the poor under a form of price discrimination, leading to "mission expansion" as opposed to mission drift [@mersland2010microfinance]. 
+The win-win school attempts to reconcile the commercial model and welfare approach to microfinance. Adherents of the win-win school postulate that it is possible to achieve both financial sustainability (that is, turn a profit) and, at the same time, reach the financially excluded [@kodongo2013individual]. As a case in point, some researchers argue that MFIs could strive to generate profits by offering financial services to the relatively well-off at market rates. The MFIs could then use the returns to subsidise the provision of financial services to the poor under a form of price discrimination, leading to "mission expansion" as opposed to mission drift [@mersland2010microfinance]. 
 
-Globally, the shift from the pure welfare approach of MF provision is gaining ground. Most of the transformed MFIs operate at some point on the continuum between the NGO, welfare model and the financial systems approach [@armendariz2013subsidy; @d2013unsubsidized; @hishigsuren2006transformation]. It all started in 1992 in Bolivia when Prodem, an NGO, converted to a commercial bank, Bancosol [@fernando2004micro; @creedy2018types]. Since then, many MFIs worldwide have converted from NGOs to commercial firms seeking to make profits. 
+Globally, the shift from the pure welfare approach of MF provision is gaining ground. Most of the transformed MFIs operate at some point on the continuum between the NGO, welfare model and the commercial, profit-oriented approach [@armendariz2013subsidy; @d2013unsubsidized; @hishigsuren2006transformation]. It all started in 1992 in Bolivia when Prodem, an NGO, converted to a commercial bank, Bancosol [@fernando2004micro; @creedy2018types]. Since then, many MFIs worldwide have converted from NGOs to commercial firms seeking to make profits. 
 
-This article explores the factors that drive the transformation of MFIs from NGOs to for-profit firms in Africa. To this end, we use a panel dataset of 705 MFIs in Africa from the MIX pooled database, with additional data from the World Bank- the World Development Indicators (WDI), the Worldwide Governance Index (WGI), and the Global Financial Development Databases (GFDD). We focus on Africa given the relatively low levels of financial inclusion on the continent [@demirguc2018global]and the shortcomings inherent in combining data from different regions that may yield results that are not actionable. As @d2017ngos and @wang2015ownership suggest, the nature and performance of MFIs are country-specific. Hence, research focusing on particular regions, countries or even firms could better inform policy making. 
+This article explores the factors that drive the transformation of MFIs from NGOs to for-profit firms in Africa. To this end, we use a panel dataset of 705 MFIs in Africa from the MIX pooled database, with additional data from the World Bank like the World Development Indicators (WDI), the Worldwide Governance Index (WGI), and the Global Financial Development Database (GFDD). We focus on Africa given the relatively low levels of financial inclusion on the continent [@demirguc2018global]and the shortcomings inherent in combining data from different regions that may yield results that are not actionable. As @d2017ngos and @wang2015ownership suggest, the nature and performance of MFIs are country-specific. Hence, research focusing on particular regions, countries or even firms could better inform policy making. 
 
-This article contributes to the literature in two main ways. First, the study sheds light on the drivers of the transformation of microfinance institutions in Africa. Much of the literature has not examined this phenomenon, focusing on the shift's consequences and how MFIs can balance financial and social missions [@d2013unsubsidized; @forkusam2014does; @mia2017mission]. We believe that our analysis could form a reasonable starting point for analysing the transformation of MFIs in other regions or countries. Second, we detail the linkages between the drivers of micro-finance institutions' transformation, showing how they interact to change the likelihood of conversion. We highlight the pitfalls that bedevil analysis pools data from heterogeneous sources, which may mask crucial differences or similarities between the analysis units. 
+This article contributes to the literature in two main ways. First, the study sheds light on the drivers of the transformation of microfinance institutions in Africa. Much of the literature has not examined this phenomenon, focusing, instead, on the shift's consequences and how MFIs can balance financial and social missions [@d2013unsubsidized; @forkusam2014does; @mia2017mission]. We believe that our analysis could form a reasonable starting point for analysing the transformation of MFIs in other regions or countries. Second, we detail the linkages between the drivers of micro-finance institutions' transformation, showing how they interact to change the likelihood of conversion. We highlight the pitfalls that bedevil analysis of pooled data from heterogeneous sources, which may mask crucial differences or similarities between the analysis units. 
 
-The rest of the article is structured as follows. Section 2 presents the theoretical underpinnings and empirical findings related to the study. Subsequently, in section 3, we offer a summary of findings before delving into the analysis method and results in sections 4 and 5, respectively. Section 6 concludes.
+The rest of the article is structured as follows. Section 2 presents the theoretical underpinnings and empirical findings related to the study. Subsequently, in section 3, we offer a summary of findings of this study before delving into the analysis method and attendant results in sections 4 and 5, respectively. Section 6 concludes.
 
 # Related Literature
-Much of the early literature on the institutional change of MFIs dealt with the theoretical, philosophical, and historical basis for the transformation of MFIs from NGOs to commercial firms and the potential impacts of such conversion [@campion1999institutional; christen2001commercialization; @gutierrez201920; @zaby2019science]. Views of scholars regarding the transformation of MFIs drew from the institutional theory on the persistence and convergence in organisations, including change and de-institutionalisation within firms [@scott2004institutional] and the dominance of neoliberalism after the end of the cold war [@ostry2017]. 
+Much of the early literature on the institutional change of MFIs dealt with the theoretical, philosophical, and historical basis for the transformation of MFIs from NGOs to commercial firms and the potential impacts of such conversion [@campion1999institutional; @christen2001commercialization; @gutierrez201920; @zaby2019science]. Views of scholars regarding the transformation of MFIs drew from the institutional theory on the persistence and convergence in organisations, including change and de-institutionalisation within firms [@scott2004institutional] and the dominance of neoliberalism after the end of the cold war [@ostry2017]. 
 
 The institutional theory holds that the institutional environment is more influential in developing formal structures in organisations than market pressures [@maggio1991]. Coercion is one form of pressure from the institutional environment that makes organisations adopt institutional structures and practices. Institutional theorists note that stakeholders could force firms to adopt specific organisational structures and practices without critical scrutiny to gain legitimacy in the institutional environment [@scott2004institutional; @martinez2017coercive]. 
 
 With this hindsight, @bateman2010doesn traces the pressure to convert MFIs from NGOs to the commercial model to the rise of neo-liberalism and the insistence that firms be financially self-sufficient instead of relying on government subsidies and, in the case of MFIs, donor funds. The wave of economic liberalisation and privatisation commenced in the early 1990s due to neo-liberalism [@silva1998neoliberalism]. Researchers point to pressure from financiers of MF such as USAID and the World Bank as a significant driver for the decision for MFIs to transform [@ostry2017]. 
 
-However, given that MFIs have a social mission, the transition to a market-led positioning is bound to conflict with the social objectives and threaten the MF industry's legitimacy [@ramus2017; @nason2018behavioral]. Specifically, the quest to satisfy both financial objectives and the social mission is likely to conflict, which may cause "mission drift" [@mersland2010microfinance; @mia2017mission], where MFIs give greater priority to profitability than outreach to the unbanked. 
+However, given that MFIs have a social mission, the transition to a profit-oriented positioning is bound to conflict with the social objectives and threaten the MF industry's legitimacy [@ramus2017; @nason2018behavioral]. Specifically, the quest to satisfy both financial objectives and the social mission is likely to conflict, which may cause "mission drift" [@mersland2010microfinance; @mia2017mission], where MFIs give greater priority to profitability than outreach to the unbanked. 
 
 Nonetheless, the push from donors to transform MFIs seems to contradict the slow pace of the transformation. NGOs still form a substantial proportion of MFIs in Africa, accounting for 32%, second only to Non-Bank Financial Institutions (NBFIs) at 40% [@market2018global]. A question arises regarding the factors behind the persistence of certain organisational forms of MFI provision in Africa and across the globe. @pashkova2016business tackled this question. They found that the cooperative model is prevalent in economies with civil law systems, low inflation levels, and high economic growth rates. 
 
-In contrast, NGO type MFIs feature in countries with high inflation rates and low economic growth levels, meaning that NGOs help the poor cope during challenging economic times. The commercial banking model features most in economies with common law legal systems. However, the study by Pashkova, et al. does not explicitly address the transformation question; factors that determine the transformation of MFIs from NGOs to a commercial model addressed this article.
+In contrast, NGO type MFIs feature in countries with high inflation rates and low economic growth levels, meaning that NGOs help the poor cope during challenging economic times. The commercial banking model features most in economies with common law legal systems. However, the study by Pashkova, et al. does not explicitly address the transformation question; factors that determine the transformation of MFIs from NGOs to a commercial model, which are explicitly addressed this article.
 
-The capacity of the capital markets and its antecedents may raise the propensity for the transformation of MFIs. MFIs located in countries with well-developed capital markets can efficiently issue debt and equity instruments and raise public deposits  [@allen2013resolving; @allen2014african]. Available literature points to legal tradition, governance and education as drivers of financial development in a country [@rajan1998financial; @baltagi2009financial] and which, by extension, drives economic growth going by the financial development-economic growth nexus literature [@claessens2003financial]. The size of an MFI in terms of assets base, structure, and tangibility could enhance its capital acquisition capacity in line with the trade-off theory of capital structure [@barclay2005capital; @gwatidzo2009corporate; @ojah2016effects]. 
+The capacity of the capital markets and their antecedents may raise the propensity for the transformation of MFIs. MFIs located in countries with well-developed capital markets can efficiently or more readily issue debt and equity instruments and raise public deposits  [@allen2013resolving; @allen2014african]. Available literature points to legal tradition, governance, and education, as drivers of financial development in a country [@rajan1998financial; @baltagi2009financial] and which, by extension, drives economic growth going by the financial development-economic growth nexus literature [@claessens2003financial]. The size of an MFI in terms of assets base, structure, and tangibility could enhance its capital acquisition capacity in line with the trade-off theory of capital structure [@barclay2005capital; @gwatidzo2009corporate; @ojah2016effects]. 
 
-@ledgerwood2006transforming attribute the financing structure, hence the organisational form of an MFI, to the institutional life cycle. For instance, in the early stages, most MFIs operate as NGOs relying on donations and concessionary funds, given that commercial funders deem them too risky. Later, they supplement their funding through government subsidies and equity funding from NGOs and public investors. In the final consolidation phase, most MFIs rely on debt, using foreign donors as guarantees and deposits, and increasingly adopt the commercial model. Thus, the age of an MFI may have a bearing on both the capital structure and organisational structure, with firm-level, country and regional, disparities attributable to regulatory provisions relating to the ways MFIs can raise capital and historical legacies on saving and lending [@bayai2016financing]. The agency conflict that follows the introduction of debt and equity brings to the fore the potential conflict between optimising financial returns and the quest to stick to the social mission of MFIs,  the second central strand of research on MFI conversion  [@nurmakhanova2015trade; @bayai2016financing; @abdulai2017trade; @awaworyi2018sustainability]. 
+@ledgerwood2006transforming attribute the financing structure, hence the organisational form of an MFI, to the institutional life cycle. For instance, in the early stages, most MFIs operate as NGOs relying on donations and concessionary funds, given that commercial funders deem them too risky. Later, they use government subsidies and equity funding from NGOs and public investors to supplement their funding. In the final consolidation phase, most MFIs rely on debt, using foreign donors as guarantees. Deposits also play a prominent role in this consolidation phase as MFIs increasingly adopt the commercial model. 
 
-Quality of institutions features prominently in explaining the investment climate in a country. The famed "Lucas Paradox" has primarily been explained away by the differences in, among others, the institutions, especially the capacity to enter into and enforce contracts and guarantees against state appropriation of private property - property rights [@azemar2013has; @goktan2015explanation]. MFI transformation connotes the entry of private, profit-oriented capital that seeks returns and favours countries with refined institutions. Moreover, researchers have variously cited the quality of institutions as drivers of the ease to which firms, MFIs included, can access private funds by fostering a well developed financial ecosystem [@huang2010political; @kaidi2019financial]. In this case, the financial system would include equity and debt markets where private investors could buy stakes in or lend funds to the MFIs that seek to go commercial. The next section highlights the results of the study. 
+Thus, the age of an MFI may have a bearing on both the capital structure and organisational structure. Regulatory provisions relating to the ways MFIs can raise capital and historical legacies on saving and lending [@bayai2016financing] may explain the remaining firm, country and regional disparities. The agency conflict that follows the introduction of debt and equity brings to the fore the potential conflict between optimising financial returns and sticking to the social mission of MFIs,  the second central strand of research on MFI conversion  [@nurmakhanova2015trade; @bayai2016financing; @abdulai2017trade; @awaworyi2018sustainability]. 
+
+Quality of institutions features prominently in explaining the investment climate in a country. Researchers have primarily explained away the "Lucas Paradox" using the differences in, among others, the institutions, especially the capacity to enter into and enforce contracts and guarantees against state appropriation of private property - property rights [@azemar2013has; @goktan2015explanation]. MFI transformation connotes the entry of private, profit-oriented capital that seeks returns and favours countries with refined institutions. Moreover, researchers have variously cited the quality of institutions as drivers of the ease with which firms, MFIs included, can access private funds by fostering a well developed financial ecosystem [@huang2010political; @kaidi2019financial]. In this case, the financial system would include equity and debt markets where private investors could buy stakes in or lend funds to the MFIs that seek to go commercial. The next section highlights the results of the study. 
 
 # Summary of Results
-The output from analysis of the data shows that at the country level, it is legal tradition, stock markets development, and governance (institutional quality) that relate to the likelihood of the transformation of MFIs. At the firm level, the age and size of the MFI raise the probability of conversion. There is also a robust time trend towards commercialization of MFIs which points to increased acceptance of microfinance's financial systems approach. Regional disparities are also evident with North Africa represented by NGOs in the sample data, probably due to religious constraints. GDP growth rate and education levels are not significant determinants of the probability of transformation. However, like the stock market to GDP, private credit to GDP has a negative coefficient.
+The output from analysis of the data shows that at the country level, it is legal tradition, stock markets development, and governance (institutional quality) that relate significantly to the likelihood of the transformation of MFIs. At the firm level, the age and size of the MFI raise the probability of conversion. There is also a robust time trend towards commercialization of MFIs which points to growing acceptance of microfinance's profit-orientation. Regional differences are also evident with North Africa represented by NGOs in the sample data, probably due to religious constraints. GDP growth rate and education levels are not significant determinants of the probability of transformation. However, like the stock market to GDP, private credit to GDP has a negative coefficient, suggesting, sensibly that the availability of larger financial markets does not support MFIs' model conversion.
 
-Precisely, the probability of an MFI transforming declines with the increase in age, with older MFIs more likely to follow the NGO model than younger MFIs. In contrast, bigger MFIs have a higher likelihood of transforming to the commercial model, while smaller MFIs retain the NGO status. Also, MFIs in common law countries have a higher chance of changing than those in civil law countries. However, it is MFIs located in countries with other legal traditions (that is, not civil or common - see Appendix 6)  that have the highest probability of going commercial. Stock market development relates negatively with the likelihood of transformation of MFIs, likely because people in countries with well developed financial markets are more likely served by the mainstream financial system, relying less on microfinance. However, only stock market development is a significant driver, with private credit being a negative but insignificant driver of transformation. As expected, governance/ institutional quality positively relates to the chance of a conversion. Regionally, the sample data has only NGOs for North Africa, reflecting religious constraints to for-profit microfinance lending in majority Muslim countries. Importantly, there is a potent time trend towards commercialisation of MFIs which points to a triumph of the financial systems approach to microfinance over the welfare model. GDP growth rate shows mixed results but is insignificant. In the next section, we highlight the methodology applied in the study.
+Precisely, the probability of an MFI transforming declines with the increase in age, with older MFIs more likely to follow the NGO model than younger MFIs. In contrast, bigger MFIs have a higher likelihood of transforming to the commercial model, while smaller MFIs retain the NGO status. Also, MFIs in common law countries have a higher chance of changing than those in civil law countries. However, it is MFIs located in countries with other legal traditions (that is, not civil or common law traditions - see Appendix 6)  that have the highest probability of going commercial. Stock market development relates negatively with the likelihood of transformation of MFIs, likely because people in countries with well developed financial markets are more likely served by the mainstream financial system, relying less on microfinance. However, of the financial development indicators, only stock market development is a significant driver, with private credit having a negative but insignificant effect of transformation. As expected, governance/ institutional quality positively relates to the chance of a conversion. Regionally, the sample data has only NGOs for North Africa, reflecting religious aversion to for-profit microfinance operating in majority Muslim countries. Importantly, there is a potent time trend towards commercialisation of MFIs which points to a triumph of the commercial approach to microfinance over the welfare model. GDP growth rate shows mixed results but is insignificant. In the next section, we describe the methodology applied in the study.
 
 
 ```{r}
@@ -354,7 +356,7 @@ panel_logit <- function(data, depvar, indepvars,
 ```
 
 # Method
-The article uses two approaches; the logit and probit models and the multinomial logit model, given that our dependent variable is discrete and error terms may not be normally distributed [@cramer2002origins]. For the logit and probit models, MFIs following the NGO model take a code of zero and one for NBFIs, credit unions/ cooperatives, and rural banks. For the multinomial logit model, NGOs still take a zero code, with commercial banks, NBFIs, credit unions, and Rural Banks taking one, two, three, and four, respectively. The next section lays out and describes the models, variables, and data sources. 
+The article uses three empirical estimation approaches: the binary logit and probit models and the multinomial logit model, given that our dependent variable is discrete and error terms may not be normally distributed [@cramer2002origins]. For the logit and probit models, MFIs following the NGO model take a code of zero and those of NBFIs, credit unions/ cooperatives, and rural banks forms taking a code of one. For the multinomial logit model, NGOs still take a zero code, with commercial banks, NBFIs, credit unions, and Rural Banks taking codes of one, two, three, and four, respectively. The multinomial logit model will help uncover factors that drive the choice of a particular legal form by NGOs adopting the commercial model. NGOs converting to the commercial model have a choice of being commercial banks, credit unions, NBFIs, and rural banks. The next section lays out and describes the models, variables, and data sources. 
 
 ## The Model, Variables Description and Data Sources
 We use the model below to run both logit and probit regressions on a panel dataset of 705 MFIs in Africa. Assuming the error term $\epsilon$ follows a logistic distribution [@czepiel2002maximum], we have,
@@ -372,31 +374,26 @@ p_{it}  =  \frac{1}{1 +  e^{- z_{it} } }
 and
 
 \begin{equation}
-1 + p_{it}  =  \frac{1}{1 +  e^{z_{it} } }
+1 + p_{it}  =  \frac{1}{1 +  e^{z_{it} } }, for z_{it} = f(x_{it})
 \end{equation}
 
-for $z_{it} = f(x_{it})$
 
-In the model, $y_{it}$ is the current legal status of the MFI, the dependent variable. The dependent variable is a dummy with NGOs, the base outcome (coded zero), and other legal traditions take a code of one. The symbol $x_{it}$ represents a vector of independent variables- age, size, capital market development, legal tradition, GDP growth rate, and institutional quality. Additionally, we include year dummies to cater to the trends towards commercialisation. 
+In the model, $y_{it}$ is the current legal status of the MFI, the dependent variable which is a dummy with zero, representing NGOs as the base outcome. The other legal forms of MFIs take a code of one. The symbol $x_{it}$ represents a vector of independent variables: age, size, capital market development, legal tradition, GDP growth rate, and institutional quality. Additionally, we include year dummies to cater for the trends towards commercialisation. 
 
 The multinomial logit model extends the binary logit model to more than two unordered levels (discrete choices). The data at hand meets the requirements for running a multinomial logit model as the dependent variable (the legal status of each MFI) has one outcome for each case. Also, the independent variables do not faultlessly predict the dependent variable [@petrucci2009primer]. Suppose we have a dependent variable $y$ consisting of $K$ choices for $K>=2$. Further, let the independent variables be $x_1, x_2,………. x_n$, then we can specify the multinomial logit model as follows. 
 
 \begin{equation}
-log(\frac{prob(k/X)}{prob(K/X)}) =   \beta_{0}^{k}  x_{0}  + \beta_{1}^{k}  x_{1} +  \cdots + \beta_{p}^{k}  x_{p}
+log(\frac{prob(k/X)}{prob(K/X)}) =   \beta_{0}^{k}  x_{0}  + \beta_{1}^{k}  x_{1} +  \cdots + \beta_{p}^{k}  x_{p}, for k = 1 \cdots K-1
 \end{equation}
 
-for $k = 1 \cdots K-1$
-
-$y$ is the dependent variable, in this case, one of NGO, commercial bank, NBFI, credit union or rural bank.
-
-$x$ is a vector of independent variables.
+$y$ is the dependent variable, in this case, one of NGO, commercial bank, NBFI, credit union or rural bank and $x$ is a vector of independent variables.
 
 If $K>2$, then we have a multinomial logit with $K-1$ set of equations. Where $K=2$, the model is the binary logit model denoted in equation one (1) where we have one equation. Note that in this case, we have arbitrarily assigned the last category (K) as the reference. Any other group can serve as a reference and hence not be part of the equations set. 
 
 One of the significant drawbacks of the multinomial logit is the violation of the assumption of the independence of irrelevant alternatives (IIA). @cheng2007testing ) illustrate this assumption using the blue bus- red bus example. If the choice between car transport and a red bus, and given that the probability of choosing a bus is $0.8$, and $0.2$ for a car, then the bus's odds over car transport is 4. Suppose we introduce a third alternative, the blue bus. If the probabilities of choosing a red bus, blue bus, and car transport are $0.6$, $0.25$, $0.15$, respectively, the assumption holds since the odds of selecting a red bus over a car are still $4$. If the odds are different from $4$, then the model violates the IIA, and the multinomial model is not fit for the data. In our case, we plausibly see the assumption holding because the legal status of an individual MFI is independent of the legal status of other MFIs. Table 1 (next page) describes the variables in detail. 
 
 ```{r}
-tribble(~ Variable_Description, "1. Current Legal Status (Dependent Variable): This is the dependent variable. For logit and probit models, we create a dummy with the MFIs following the NGO Model getting a code of zero, and one in the case of non-bank financial institutions (NBFIs), rural banks, and credit unions/ cooperatives. We assign codes of zero to four for the multinomial logit model for NGOs, Banks, NBFIs, Cooperatives and Rural Banks, respectively. The data are available from the Microfinance Information Exchange, MIX (See source on note 1).", "", "2.	Age: The period in which the MFI has been in operation. MFIs fall into one of three groups: new (1-4 years), young (4-8 years), and mature (over 8 years). The data are available from MIX.", "", "3. Legal Tradition (Legal): The indicator is a dummy variable with common law countries coded 0, civil law countries 1, and 2 otherwise as per the classification by Oto-Peralías and Romero-Ávila (2014).", "", "4. Size (Log of Total Assets): We proxy the size of MFI with the natural logarithm of total assets, again using MIX data.", "", "5. Governance/ Institutional Quality (KKM): We take the first principal component of the WGI developed by Daniel Kaufmann, Aart Kraay and Massimo Mastruzzi (KKM) available on the World Bank's Worldwide Governance Indicators, WGI (See source on note 3).", "", "6. Private Credit to GDP: We capture the total amount of credit advanced to the private sector by financial intermediaries as a proxy for capital markets development concerning the banking sector following Ito and Kawai (2018). The data source is the Global Financial Development Database (GFDD) of the World Bank (See note 4).", "", "7. Stock market capitalisation to GDP: We capture the  extent of stock market development using the ratio of stock market capitalisation to GDP to proxy how firms can raise equity capital. Although Africa's equity markets are thin, some relatively large stock markets like South Africa, Kenya, and Ghana exist. The data are from the GFDD.", "", "8. GDP annual growth rate (GDP): This is the year on year growth in output adjusted for inflation and sourced from the World Development Indicators (WDI) (See note 2).", "", "9. Education (EDUC): The indicator is a ratio of the gross enrolment in secondary school to the gross primary school enrolment as defined in the literature (Allen et al., 2013, 2014). The data are from the WDI.", "") %>% 
+tribble(~ Variable_Description, "1. Current Legal Status (Dependent Variable): This is the dependent variable. For logit and probit models, we create a dummy variable with the MFIs following the NGO Model getting a code of zero, and one in the case of non-bank financial institutions (NBFIs), rural banks, and credit unions/ cooperatives. We assign codes of zero to four for the multinomial logit model for NGOs, Banks, NBFIs, Cooperatives and Rural Banks, respectively. The data are available from the Microfinance Information Exchange, MIX (See source in note 1 below).", "", "2.	Age: The period in which the MFI has been in operation. MFIs fall into one of three groups: new (1-4 years), young (4-8 years), and mature (over 8 years). The data are available from MIX.", "", "3. Legal Tradition (Legal): The indicator is a dummy variable with common law countries coded 0, civil law countries 1, and 2 otherwise as per the classification by Oto-Peralías and Romero-Ávila (2014).", "", "4. Size (Assets): We proxy the size of MFI with the natural logarithm of total assets, again using MIX data.", "", "5. Governance/ Institutional Quality (KKM): We take the first principal component of the WGI developed by Daniel Kaufmann, Aart Kraay and Massimo Mastruzzi (KKM) that is available on the World Bank's Worldwide Governance Indicators, WGI (See source in note 3 below).", "", "6. Private Credit to GDP (pcrdbgdp): We capture the total amount of credit advanced to the private sector by financial intermediaries as a proxy for capital markets development concerning the banking sector following Ito and Kawai (2018). The data source is the Global Financial Development Database (GFDD) of the World Bank (See note 4).", "", "7. Stock market capitalisation to GDP (stmktcap): We capture the  extent of stock market development using the ratio of stock market capitalisation to GDP to proxy the extent to which firms can raise equity capital. Although Africa's equity markets are thin, some relatively large stock markets like South Africa, Egypt, Nigeria, Kenya, and Ghana exist. The data are from the GFDD.", "", "8. GDP annual growth rate (gdp_growth_annual): This is the year on year growth in output adjusted for inflation and sourced from the World Development Indicators (WDI) (See note 2).", "", "9. Education (EDUC): The indicator is a ratio of the gross enrolment in secondary school to the gross primary school enrolment as defined in the literature (Allen et al., 2013, 2014). The data are from the WDI.", "") %>% 
   
   kbl(., caption = "Description of Variables", booktabs = TRUE) %>% 
   
@@ -404,27 +401,27 @@ tribble(~ Variable_Description, "1. Current Legal Status (Dependent Variable): T
   
   footnote(number = c("MIX Database on www.themix.org and https://datacatalog.worldbank.org/dataset/mix-market", "WDI on https://databank.worldbank.org/source/world-development-indicators.", "WGI/ KKM on https://databank.worldbank.org/source/worldwide-governance-indicators.", "GFDD on https://www.worldbank.org/en/publication/gfdr/data/global-financial-development-database"), number_title = "Notes",
     
-           general = "Authors' construction from the literature",
-           general_title = "Source: ")
+           general = "Source: Authors' construction from the literature",
+           general_title = "")
   
   #knitr::kable(caption = "Description of variables")
 ```
 
 
-# Results
+# Data Analysis and Results
 ## Exploratory Data Analysis
 In this section, we visualise the data and then summarise the variables in the model. 
 
 ### Data visualisation
-Figure 1 below shows the summary statistics and scatter plots for the independent numeric variables. The summaries show a high correlation between education on the one hand and private bond market capitalisation to GDP, stock market capitalisation to GDP, and private credit to GDP on the other at around 0.5. As literature shows, higher education levels coincide with greater participation of individuals in capital markets as financial inclusion levels drop [@allen2013resolving; @allen2014african]. The stock market capitalisation to GDP and private bond market capitalisation to GDP correlates vastly, at 0.73, which indicates the concomitant maturity of capital markets. Typically, debt markets mature first, followed by stock markets and their development levels are correlated  [@levine1999stock]. Other variables that show a high correlation include private credit to GDP on the one hand and private bond market capitalisation to GDP, and stock market capitalisation to GDP at 0.32 and 0.47. Institutional quality (KKM) also correlates with education, private credit to GDP and private bond market capitalisation [@yartey2008determinants]. 
+Figure 1 below shows the summary statistics and scatter plots for the independent numeric variables. The summaries show a high correlation between education on the one hand and private bond market capitalisation to GDP, stock market capitalisation to GDP, and private credit to GDP on the other at around 0.5. As literature shows, higher education levels coincide with greater participation of individuals in capital markets as financial inclusion levels rise [@allen2013resolving; @allen2014african; @ito2018quantity]. The stock market capitalisation to GDP and private bond market capitalisation to GDP correlates vastly, at 0.73. Typically, debt markets mature first, followed by stock markets and their development levels are highly correlated  [@levine1999stock]. Other variables that show a high correlation include private credit to GDP on the one hand and private bond market capitalisation to GDP, and stock market capitalisation to GDP at 0.32 and 0.47. Institutional quality (KKM) also correlates with education, private credit to GDP and private bond market capitalisation [@yartey2008determinants]. 
 
-With this hindsight, we drop education and private bond market capitalisation from the model. Note that much of the private credit to GDP ratio's variation already reflected in the stock market to GDP ratio. Also, education reflects in general capital market development as documented in the literature. We also note that North Africa has only NGOs in the model, perhaps due to faith [@allen2013resolving; @allen2014african; @hassan2018religious]. Hence, exclude region in the model. There could be country-specific effects that we capture using the quality of governance (KKM) [@kunvcivc2014institutional] and the annual GDP growth rate [@butkiewicz2006institutional]. 
+With this hindsight, we drop education and private bond market capitalisation from the model. Note that much of the private credit to GDP ratio's variation already reflects in the stock market to GDP ratio. Also, education reflects in general capital market development as documented in the literature [@allen2013resolving; @allen2014african]. We also note that North Africa has only NGOs in the model, perhaps due to faith [@allen2013resolving; @allen2014african; @hassan2018religious]. Hence, we exclude region in the model. There could be country-specific effects that we capture using the quality of governance (KKM) [@kunvcivc2014institutional] and the annual GDP growth rate [@butkiewicz2006institutional]. 
 
-Figure 2 shows that mature MFIs dominate the dataset across all legal statuses and particularly dominant among rural banks, NGOs, and cooperatives. Turning to the prevalence of MFIs by legal status, cooperatives dominate civil law countries. Simultaneously, NGOs, NBFIs, commercial banks and rural banks are dominant in common law countries, which researchers have documented [@pashkova2016business]. For other legal traditions, NBFIs and cooperatives dominate. As noted, North Africa has only NGOs in the dataset, which could indicate the religious constraints towards interest charging financial intermediaries  [@hassan2018religious]. Finally, while commercial banks and NBFIs show a higher asset base, NGOs and credit unions are not large. Commercial banks would be more extensive due to statutory minimum capital requirement resulting from their desire to optimise economies of scale [@aiyar2016does].  
+Figure 2 shows that mature MFIs dominate the dataset across all legal forms and particularly dominant among rural banks, NGOs, and cooperatives. Turning to the prevalence of MFIs by legal status, cooperatives dominate civil law countries. Simultaneously, NGOs, NBFIs, commercial banks and rural banks are dominant in common law countries, which researchers have documented [@pashkova2016business]. For other legal traditions, NBFIs and cooperatives dominate. As noted, North Africa has only NGOs in the dataset, which could indicate the religious constraints towards interest charging financial intermediaries  [@hassan2018religious]. Finally, while commercial banks and NBFIs show a higher asset base, NGOs and credit unions are not as large. Commercial banks assets could be more extensive due to statutory minimum capital requirement resulting from their desire to optimise economies of scale [@aiyar2016does].  
 
 Turning to Figure 3, country-level governance matter more for commercial MFIs- commercial banks and NBFIs, compared to NGOs and rural banks in line with the link in the literature between investment, governance, and property rights [@claessens2003financial]. Commercial banks, rural banks, and NGOs dominate countries with higher stock market development levels, while NBFIs and cooperatives trail, noting that cooperatives may be relatively less inclined to obtain funding from stock markets [@porter1987economic]. The result could indicate the importance of equity capital for commercial banks and NGOs, while NBFIs tend to rely more on private equity and debt. Indeed, the data shows NBFIs dominate in countries where private credit to GDP is highest, followed by cooperatives and NGOs, while commercial banks and rural banks come last.
 
-Lastly, commercial banks, NBFIs and rural banks tend to dominate countries with higher GDP growth rates. Higher GDP growth implies higher profitability which in turn allows commercial MFIs to thrive. Low GDP growth means that the not-for_profit NGOs and member-oriented cooperatives tend to succeed as a cushion to the vulnerable in society and fill the void left by the commercial MFIs.
+Lastly, commercial banks, NBFIs and rural banks tend to dominate countries with higher GDP growth rates. Higher GDP growth implies higher profitability which in turn allows commercial MFIs to thrive. Low GDP growth means that the not-for-profit NGOs and member-oriented cooperatives tend to succeed as a cushion to the vulnerable in society and fill the void left by the commercial MFIs.
 
 \newpage
 
@@ -765,14 +762,14 @@ plot_annotation(title = "", caption = "Source: Authors' construction from MIX da
 \elandscape
 
 \newpage
-### Summary Statistics
-Categorical variables summarised in Table 2 have no missing values. There are 1,280 NGOs against 3502 MFIs that are either commercial banks (619), NBFIs (1318), cooperatives (1427), and rural banks (138). As noted, even with the transformation of MFIs, NGOs still form a substantial number of MFIs, with the country to country variations [@d2017ngos]. While 2558 MFIs are mature, 1200 are new, and 1024 are young. The result may indicate a slowdown in the establishment of new MFIs as donations become more unreliable. 1877 MFIs are from common law countries, with Civil law countries accounting for 1849, while 1056 come from other legal traditions. It is notable, as shown in Appendix 6, that most countries in Africa are either common law (18) or civil law(19), with very few nations in the 'other' legal traditions category (11) [@oto2014distribution]. It is also worth noting that North Africa accounts for only 166 observations in the data against 4616 observations in the sample dataset. Table 3 shows the summary statistics for the numeric variables where assets, governance (KKM), and GDP growth rates account for the highest variation. 
 
-Table 4 and Table 7 shows that NGOs, NBFIs, and commercial banks dominate common law countries. In civil law countries, it is cooperatives, NGOs, and NFIs that are most prevalent. In other legal traditions, it is NBFIs and credit unions that dominate. The result could indicate that the relatively well-developed capital markets in common law countries allow private, for-profit MFIs to thrive while not displacing NGOs. It means that NGOs in common law countries mostly serve niche markets where commercial MFIs find it uneconomical to reach. Weak capital markets in civil law countries mean that cooperatives are central, with NGOs playing a significant role. Commercial MFIs like commercial banks and cooperatives presence is low due to capital constraints. Turning to age in Table 5, most of the mature MFIs in the sample data are cooperatives, NGOs, and commercial banks in that order, while most of the new MFIs are NBFIs, cooperatives and commercial banks, respectively. The results could indicate the increasing acceptance of the commercial model with newer MFIs going commercial. Table 6 shows the correlation between age and size, with larger MFIs more likely to be older. 
+### Summary Statistics
+Categorical variables summarised in Table 2 have no missing values. There are 1,280 NGOs against 3502 MFIs that are either commercial banks (619), NBFIs (1318), cooperatives (1427), or rural banks (138). As noted, even with the transformation of MFIs, NGOs still form a substantial number of MFIs, with the country to country variations [@d2017ngos]. While 2558 MFIs are mature, 1200 are new, and 1024 are young. The result may indicate a slowdown in the establishment of new MFIs as donations become more unreliable. 1877 MFIs are from common law countries, with Civil law countries accounting for 1849, while 1056 come from other legal traditions. It is notable, as shown in Appendix 6, that most countries in Africa are either common law (18) or civil law(19), with relatively fewer nations in the 'other' legal traditions category (11) [@oto2014distribution]. It is also worth noting that North Africa accounts for only 166 observations in the data against 4616 observations in the sample dataset. Table 3 shows the summary statistics for the numeric variables where assets, governance (KKM), and GDP growth rates account for the highest variation. 
+
+Table 4 and Table 5 shows that NGOs, NBFIs, and commercial banks dominate common law countries. In civil law countries, it is cooperatives, NGOs, and NFIs that are most prevalent. In other legal traditions, it is NBFIs and credit unions that dominate. The result could indicate that the relatively well-developed capital markets in common law countries allow private, for-profit MFIs to thrive while not displacing NGOs. It means that NGOs in common law countries mostly serve niche markets where commercial MFIs find it uneconomical to reach. The relatively weak capital markets in civil law countries mean that cooperatives are central, with NGOs also playing a significant role. Commercial MFIs like commercial banks and cooperatives' presence is low due to capital constraints. Turning to age in Tables 6, most of the mature MFIs in the sample data are cooperatives, NGOs, and commercial banks in that order, while most of the new MFIs are NBFIs, cooperatives and commercial banks, respectively. The results could indicate the increasing acceptance of the commercial model with newer MFIs going commercial. Table 7 shows the correlation between age and size, with larger MFIs more likely to be older. 
 
 ```{r}
 my_data$dummy <- factor(my_data$dummy, labels = c("ngo", "other"))
-levels(my_data$dummy)
 
 ## Summary statistics for factor variables 
 my_data %>% 
@@ -790,16 +787,52 @@ my_data %>%
   rename(Variable = skim_variable, 
          
          Counts = factor.top_counts) %>% 
+  mutate(Counts = str_replace_all(Counts, "[oO]th", "Others"),
+         
+         Counts = str_replace_all(Counts, "Coo", "Cooperative"),
+         
+         Counts = str_replace_all(Counts, "NBF", "NBFI"),
+         
+         Counts = str_replace_all(Counts, "Ban", "Bank"),
+         
+         Counts = str_replace_all(Counts, "Mat", "Mature"),
+         
+         Counts = str_replace_all(Counts, "You", "Young"),
+         
+         Counts = str_replace_all(Counts, "Com", "Common"),
+         
+         Counts = str_replace_all(Counts, "Civ", "Civil"), 
+         
+         Counts = str_replace_all(Counts, "Afr", "Sub-Saharan Africa"),
+         
+         Counts = str_replace_all(Counts, "Nor", "North Africa"), 
+         
+         Variable = str_to_sentence(Variable)
+         
+         ) %>% 
+  
+mutate(Variable = case_when(Variable == "Currentlegaldummy" ~ "Current legal status dummy",
+                            
+                            Variable == "Currentlegalstatus" ~ "Current legal status",
+                            
+                            TRUE ~ Variable
+                            
+                            
+                            )
+       
+       
+       
+       ) %>% 
   
 kableExtra::kbl(., caption = "Summary statistics for categorical variables", 
       
   booktabs = TRUE) %>% 
   
-  kable_paper(full_width = FALSE) %>% 
+  kable_paper(full_width = TRUE) %>% 
   
-  footnote(general = "Authors' construction from MIX data",
+  footnote(general = "Source: Authors' construction from MIX data",
            
-  general_title = "Source: ")
+  general_title = "")
 ```
 
 
@@ -823,29 +856,33 @@ my_data %>%
          Q1 = numeric.p25, Median = numeric.p50, Q3 = numeric.p75,
          
          Max = numeric.p100) %>% 
+  mutate(Complete = 4782) %>% 
+  
+  rename(N = Complete) %>% 
+  
   kbl(., caption = "Summary statistics for numeric variables", 
       
       booktabs = TRUE) %>% 
   
-  kable_paper(full_width = FALSE) %>% 
+  kable_paper(full_width = TRUE) %>% 
   
-  footnote(general = "Authors' construction from MIX data",
-           general_title = "Source: ")
+  footnote(general = "Source: Authors' construction from MIX data",
+           general_title = "")
 ```
 
 
 ```{r}
 prop.table(table(my_data$legal_tradition, my_data$currentlegalstatus),1) %>% 
   
-  kbl(., caption = "Legal Status of MFIs in Africa by Disaggregated by Legal Tradition", 
+  kbl(., caption = "Legal Status of MFIs in Africa Disaggregated by Legal Tradition", 
       
       booktabs = TRUE) %>% 
   
-  kable_paper(full_width = FALSE) %>% 
+  kable_paper(full_width = TRUE) %>% 
   
-  footnote(general = "Authors' construction from MIX data",
+  footnote(general = "Source: Authors' construction from MIX data",
            
-           general_title = "Source: ",
+           general_title = "",
            
            number = "Horizontals total to 100",
            
@@ -856,65 +893,8 @@ prop.table(table(my_data$legal_tradition, my_data$currentlegalstatus),1) %>%
 
 ## Results of the Regression Model
 
-Table 11 shows the output from both the logit and probit regression analysis. We ran the analysis using the full dataset, then filter MFIs with three or more years and five or more years of data and rerun the regression. While most of the variables are significant, it is notable that there is also a robust time trend towards commercialisation of MFIs, indicating relatively fewer NGO type MFIs over time. The trend is indicative of the gains that the sustainability school has made. However, NGOs still form a substantial proportion of MFIs. In this section, we examine each variable and its relative contribution to the transformation of MFIs. Note that we use the logit model in column 1 of Table 9 to interpret the discussion results. However, the interpretation is also valid for the other models presented in the Table.
+Table 11 shows the output from both the logit and probit regression analysis. We ran the analysis using the full dataset, then filter MFIs with three or more years and five or more years of data and rerun the regression (as indicated in the bottom panel of the regression tables). We also include a time dummy although these results are not in the regression tables. However, there is also a robust positive time trend towards commercialisation of MFIs, indicating relatively fewer NGO type MFIs over time as more MFIs opt for the commercial model. The trend is indicative of the gains that the sustainability school has made. However, NGOs still form a substantial proportion of MFIs. In this section, we examine each variable and its relative contribution to the transformation of MFIs. Note that we use the logit model in column 1 of Table 9 to interpret the discussion results. However, the interpretation is also applicable to the other models presented in the Table.
 
-### Age
-
-New MFIs are more likely to adopt a commercial model than either young or mature ones, given the coefficients' negative sign. The observation may reflect the increasing acceptance of the financial systems approach to microfinance, making it harder for new entrants to attract donor funding [@d2017ngos]. We postulate that older MFIs, being the pioneers and hence already are well-acquainted with donors, find it easier to continue raising funds through donations and elicit state subsidies [@d2013unsubsidized; @mia2017mission]. Established MFIs have a historical relationship with donors. They are likely to attract funds, more so from donors that favour the welfare approach to microfinance of reaching out to the financially excluded first before pursuing profits. The results are in line with those in Table 5, which shows the distribution of MFI legal status disaggregated by age.  While only 18% of NGOs are new, over 30% are mature, an upward trend. By comparison, the other legal status either decline or are relatively constant.
-
-
-```{r}
-prop.table(table(my_data$age, my_data$currentlegalstatus),1) %>% 
-  
-  kbl(., caption = "Legal Status of MFIs in Africa by Disaggregated by Age", 
-      
-      booktabs = TRUE) %>% 
-  
-  kable_paper(full_width = FALSE) %>% 
-  
-  footnote(general = "Authors' construction from MIX data",
-           
-           general_title = "Source: ")
-```
-
-
-Examining the coefficients, when an MFI rises from being new to young, it is 0.474 as likely to be in the commercial category than the new MFIs, ceteris paribus. This result means that new MFIs are likely to be commercial while older MFIs are most likely NGOs. ^[Relative risk ratios allow for easier interpretation of the logit models. To compute the ratio, we exponentiate the coefficients. For instance, the coefficient for young MFIs is -0.747, so the relative risk ratio is $e^{-0.747}$ which gives 0.474. In other words, the odds of having commercial model of microfinance is 1 - 0.474 = 0.526 in the sample dataset.], we find that keeping all the other variables constant, young MFIs roughly one half less likely to be commercial than new MFIs. Likewise, mature MFIs are a third as likely to be commercial compared to new MFIs. The finding is also consistent with the intense time effect towards commercialisation which points to the increased acceptance of the commercial model of MFIs. 
-
-Having started their operations before the neo-liberal tradition took hold, older MFIs have created goodwill with donors that enable them to solicit donations and subsidies easily. Mature MFIs could also have evolved business models that allow them to be financially sustainable without converting to the commercial model. For instance, mature MFIs tend to have a broader asset base meaning they have a more diverse customer base (see Table 6). Besides, they may have embedded the emphasis on the social mission in their vision, mission, and organisational cultures to such an extent that both the MFI and the donor community find it hard to pull back [@ramus2017; @berbegal2019impact].
-
-```{r}
-my_data %>% 
-  
-  group_by(age) %>% 
-  
-  summarize(Min_size = min(assets),
-    
-            Mean_size = mean(assets), 
-            
-            Median_size = median(assets),
-            
-            Max_size = max(assets)) %>% 
-  
-  rename(Age = age) %>% 
-  
-kbl(., caption = "Size (Assets) of MFIs in Africa by Disaggregated by Age", 
-      
-      booktabs = TRUE) %>% 
-  
-  kable_paper(full_width = FALSE) %>% 
-  
-  footnote(general = "Authors' construction from MIX data",
-           
-           general_title = "Source: ")
-  
-```
-
-
-Younger MFIs, on the other hand, cropped up when the paradigm shift to the institutional approach was taking shape. It means, therefore, that donors were reluctant to extend funds to such organisations. Hence, the MFIs had to supplement the little donor funding and government subsidies by raising funds from the capital markets. The thinking is consistent with the literature that shows the extent to which donor funding is volatile and especially sensitive to geopolitical realignments [@garmaise2013cheap; @d2017aid] and business cycles [@wagner2013vulnerability].
- 
-### Legal Tradition
-
-As noted, we have grouped countries in the sample data into their respective legal traditions following @oto2014distribution. MFIs in civil law countries have a higher chance of transformation compared to those from common law countries ^[Appendix 6 shows a breakdown of the legal traditions in Africa]. However, MFIs located in countries under "other" legal traditions have the highest likelihood of adopting the commercial model. The result is in line with the literature that shows the law's central place in finance [@la2013law]. Specifically, holding all other variables constant, MFIs in civil law countries are 0.656 ($e^{-0.421}$) as likely as those in common law countries to follow the commercial model, meaning that most of them remain NGOs, following the not-for-profit, welfare approach. The odds of MFIs in civil law countries being commercial is 0.344 ($1 - 0.656$). On the contrary, MFIs in countries that follow other legal traditions are twice ($e^{0.744}$) as likely to be commercial instead of NGOs, with the odds being 1.1 ($2.1 - 1.1$). 
 
 ```{r}
 my_data %>% 
@@ -933,32 +913,91 @@ my_data %>%
       
       booktabs = TRUE) %>% 
   
-  kable_paper(full_width = FALSE) %>% 
+  kable_paper(full_width = TRUE) %>% 
   
-  footnote(general = "Authors' construction from MIX data",
+  footnote(general = "Source: Authors' construction from MIX data",
            
-           general_title = "Source: ",
+           general_title = "",
            
            number = "Verticals total to 100",
            
            number_title = "Note: ")
 ```
 
-Table 4 show the breakdown of MFI legal forms by the country's legal tradition. The tables show the dominance of NGOs (32.3%), commercial banks (24.6%) and NBFIs (31%) in common law countries. Cooperatives (52.4%), NGOs (30.4%), and NBFIs (15.8%) dominate civil law countries, while NBFIs (42%), cooperatives (34.8%), and banks (12.6%) are more common in other legal traditions. There are very few banks (1.4%) and NBFIs (15.8%) in civil law countries. Given the low levels of financial development in many civil law countries, there is a commercially viable gap for commercial MFIs to fill. The gap raises the odds of MFI transformation happening more frequently in civil law countries. 
 
-On the contrary, the prevalence of commercial MFIs in common law countries could hold due to the higher levels of capital market development, reflecting the relative ease of acquiring funds [@schnyder2018twenty]. The relative ease of acquiring capital from stock and bond markets could make it less likely that NGOs would prevail, making the commercial model more appropriate. The substantial number of NGOs in common law countries would fill the gap left by commercial MFIs due to the infeasibility of serving the clients, for instance, due to geographic remoteness or extreme poverty. There is little literature in law and finance that examines other legal traditions, such as Portuguese/ Spanish traditions as in Mozambique, Angola, Equatorial Guinea, and countries with unique traditions like Ethiopia that was never a colony. The results for the "other" legal practices in Africa's setting warrant further analysis. Table 7 confirms these results, showing, for instance, that 47.34% of NGOs are in common law countries, 43.91 in civil law countries and the rest in other legal traditions. Common law countries have the bulk of banks (74.47%) and NBFIs (44.2%). Rural banks are almost entirely a common law phenomenon.  
+### Age
+
+New MFIs are more likely to adopt a commercial model than either young or mature ones, given the coefficients' negative sign. The observation may reflect the increasing acceptance of the financial systems approach to microfinance, making it harder for new entrants to attract donor funding [@d2017ngos]. We postulate that older MFIs, being the pioneers and hence already are well-acquainted with donors, find it easier to continue raising funds through donations and elicit state subsidies [@d2013unsubsidized; @mia2017mission]. Established MFIs have a historical relationship with donors. They are likely to attract funds, more so from donors that favour the welfare approach to microfinance for reaching out to the financially excluded first before pursuing profits. The results are in line with those in Table 6, which shows the distribution of MFI legal status disaggregated by age.  While only 18% of NGOs are new, 27.3% are young, while about 30% are mature, an upward trend. By comparison, the other legal status either decline or are relatively constant.
+
+
+```{r}
+prop.table(table(my_data$age, my_data$currentlegalstatus),1) %>% 
+  
+  kbl(., caption = "Legal Status of MFIs in Africa Disaggregated by Age", 
+      
+      booktabs = TRUE) %>% 
+  
+  kable_paper(full_width = TRUE) %>% 
+  
+  footnote(general = "Source: Authors' construction from MIX data",
+           
+           general_title = "")
+```
+
+
+Examining the coefficients for age for the logit model, young MFIs (4-8 years) are 0.474 as likely to be in the commercial category than the new MFIs (0-4 years), ceteris paribus. This result means that new MFIs are likely to be commercial while older MFIs are most likely NGOs. ^[Relative risk ratios allow for easier interpretation of the logit models. To compute the ratio, we exponentiate the coefficients. For instance, the coefficient for young MFIs is -0.747, so the relative risk ratio is $e^{-0.747}$ which gives 0.474. In other words, the odds of having commercial model of microfinance is 1 - 0.474 = 0.526 in the sample dataset.], we find that keeping all the other variables constant, young MFIs roughly one half less likely to be commercial than new MFIs. Likewise, mature MFIs are a third as likely to be commercial compared to new MFIs ^[Again, we exponentiate the coefficient -1.2 to get $e^{-1.2} = 0.301$]. The finding is also consistent with the intense time effect towards commercialisation which points to the increased acceptance of the commercial model of MFIs. The probit model also shows similar results. 
+
+Having started their operations before the neo-liberal tradition took hold, older MFIs have created goodwill with donors that enable them to solicit donations and subsidies easily. Mature MFIs could also have evolved business models that allow them to be financially sustainable without converting to the commercial model. For instance, mature MFIs tend to have a broader asset base meaning they have a more diverse customer base (see Table 6). Besides, they may have embedded the emphasis on the social mission in their vision, mission, and organisational cultures to such an extent that both the MFI and the donor community find it hard to pull back [@ramus2017; @berbegal2019impact].
+
+```{r}
+my_data %>% 
+  
+  group_by(age) %>% 
+  
+  summarize(Min_size = min(assets),
+    
+            Mean_size = mean(assets), 
+            
+            Median_size = median(assets),
+            
+            Max_size = max(assets)) %>% 
+  
+  rename(Age = age) %>% 
+  
+kbl(., caption = "Size (Assets) of MFIs in Africa Disaggregated by Age", 
+      
+      booktabs = TRUE) %>% 
+  
+  kable_paper(full_width = TRUE) %>% 
+  
+  footnote(general = "Source: Authors' construction from MIX data",
+           
+           general_title = "")
+  
+```
+
+
+Younger MFIs, on the other hand, cropped up when the paradigm shift to the institutional approach was taking shape. It means, therefore, that donors were reluctant to extend funds to such organisations. Hence, the MFIs had to supplement the little donor funding and government subsidies by raising funds from the capital markets. The thinking is consistent with the literature that shows the extent to which donor funding is volatile and especially sensitive to geopolitical realignments [@garmaise2013cheap; @d2017aid] and business cycles [@wagner2013vulnerability].
+ 
+### Legal Tradition
+
+As noted, we have grouped countries in the sample data into their respective legal traditions following @oto2014distribution. MFIs in civil law countries have a lower chance of transformation compared to those from common law countries ^[Appendix 6 shows a breakdown of the legal traditions in Africa]. However, MFIs located in countries under "other" legal traditions have the highest likelihood of adopting the commercial model. The result is in line with the literature that shows the law's central place in finance [@la2013law]. Specifically, holding all other variables constant, MFIs in civil law countries are 0.656 ($e^{-0.421}$) as likely as those in common law countries to follow the commercial model, meaning that most of them remain NGOs, following the not-for-profit, welfare approach. The odds of MFIs in civil law countries being commercial is 0.344 ($1 - 0.656$). On the contrary, MFIs in countries that follow other legal traditions are twice ($e^{0.744}$) as likely to be commercial instead of NGOs, with the odds being 1.1 ($2.1 - 1.1$). 
+
+Table 4 show the breakdown of MFI legal forms by the country's legal tradition. The table show the dominance of NGOs (32.3%), commercial banks (24.6%) and NBFIs (31%) in common law countries. Cooperatives (52.4%), NGOs (30.4%), and NBFIs (15.8%) dominate civil law countries, while NBFIs (42%), cooperatives (34.8%), and banks (12.6%) are more common in other legal traditions. There are very few banks (1.4%) and NBFIs (15.8%) in civil law countries. Given the low levels of financial development in many civil law countries, there is a commercially viable gap for profit-oriented MFIs to fill. The gap raises the odds of MFI transformation happening more frequently in civil law countries than in countries following common law and other legal traditions. 
+
+On the contrary, the prevalence of commercial MFIs in common law countries could hold due to the higher levels of capital market development, reflecting the relative ease of acquiring funds [@schnyder2018twenty]. The relative ease of acquiring capital from stock and bond markets could make it less likely that NGOs would prevail, making the commercial model more likely. The substantial number of NGOs in common law countries would fill the gap left by commercial MFIs due to the infeasibility of serving some clients, for instance, due to geographic remoteness or extreme poverty. There is little literature in law and finance that examines other legal traditions, such as Portuguese/ Spanish traditions as in Mozambique, Angola, Equatorial Guinea, and countries with unique traditions like Ethiopia that was never a colony. The results for the "other" legal practices in Africa's setting warrant further analysis. Table 5 confirms these results, showing, for instance, that 47.34% of NGOs are in common law countries, 43.91 in civil law countries and the rest in other legal traditions. Common law countries have the bulk of banks (74.47%) and NBFIs (44.2%). Rural banks are almost entirely a common law phenomenon.  
 
 ### Size (Log of Total Assets)
 
-All else being constant, larger MFIs in terms of assets are more likely to adopt the commercial model than the relatively smaller MFIs with fewer assets. Perhaps large MFIs can sustain their operations independent of donations and subsidies [@d2013unsubsidized]. They have a higher capacity to attract money from the capital markets, given their strong assets base and track record. Everything else remaining the same, a unit increase in the asset base of an MFI raises the probability of transformation by 1.27 ($e^{0.240}$), with the odds of being in the commercial model being 0.27 ($1.27 - 1$). 
+All else being constant, larger MFIs in terms of assets are more likely to adopt the commercial model than the relatively smaller MFIs with fewer assets. Perhaps large MFIs can sustain their operations independent of donations and subsidies [@d2013unsubsidized]. They have a higher capacity to attract money from the capital markets, given their strong assets base (as collateral) and track record. Everything else remaining the same, a unit increase in the asset base of an MFI raises the probability of transformation by 1.27 ($e^{0.240}$), with the odds of being in the commercial model being 0.27 ($1.27 - 1$). 
 
-Abundant literature in Africa and beyond, such as @gwatidzo2009corporate and @kodongo2015capital, show that the size of an MFI is an essential determinant of firms' capital structures, the mix of long term sources of funds. In this case, larger firms could easily avail collateral for funds and tend to be more open in providing information that financial intermediaries require to assess creditworthiness. On the other hand, small firms are information opaque [@beck2014sme; @kersten2017small]. Small firms, for example, may not afford to generate audited financial reports. Moreover, larger firms are likely to be mature with a solid business record which creates goodwill among the providers of funds [@beck2008finance]. The size of MFIs could also reflect the extent of property rights protection that is harder to enforce in countries with weak governance [@johnson2002property; @claessens2003financial]. A fragile institutional environment makes it difficult for firms to grow due, in part, to poor access to capital and the high costs of formalising business [@hansen2004reconsidering]. Next, we examine country-level governance / institutional quality. 
+Abundant literature in Africa and beyond, such as @gwatidzo2009corporate and @kodongo2015capital, show that the size of an MFI is an essential determinant of firms' capital structures, the mix of long term sources of funds. In this case, larger firms could easily avail collateral for funds and tend to be more open in providing information that financial intermediaries require to assess creditworthiness. On the other hand, small firms are informationally opaque [@beck2014sme; @kersten2017small]. Small firms, for example, may not afford to generate audited financial reports. Moreover, larger firms are likely to be mature with a solid business record which creates goodwill among the providers of funds [@beck2008finance]. The size of MFIs could also reflect the extent of property rights protection that is harder to enforce in countries with weak governance [@johnson2002property; @claessens2003financial]. A fragile institutional environment makes it difficult for firms to grow due, in part, to poor access to capital and the high costs of formalising business [@hansen2004reconsidering]. Next, we examine country-level governance / institutional quality. 
 
 ### Country Level Governance/ Institutional Quality (KKM)
 
 We capture governance or institutional quality by taking the first principal component of the KKM Worldwide Governance Indicators (WGI) indices [@kraay2010worldwide]. Governance (KKM Index) positively relates to the odds of transforming. All else remaining the same, when the governance index in a country rises by one unit, MFIs in the given country are 1.1 ($e^{0.095}$) times more likely to be in the commercial model than NGOs, meaning that the odds rise by $0.1$ ($1.1 - 1$). The results probably hold due to the importance of property rights in raising confidence among private investors who finance the operations of transformed MFIs (Allen et al., 2013, 2014). Where governance, and hence property rights are weak, then most MFIs would likely remain NGOs for longer as investors are reluctant to finance private ventures in line with @johnson2002property and @claessens2003financial. 
 
-Literature shows a positive link between country-level institutional quality and the establishment, growth of private firms [@sobel2008testing]. As captured in the KKM index, institutional quality captures factors that relate directly to the ease of doing business, contract enforcement effectiveness, and the extent of property rights. Where institutional quality is high, we expect private firms to take root, mainly commercial MFIs, primarily commercial banks and NBFIs. On the other hand, where institutional quality is low, NGOs and not-for-profit oriented MFIs may be more prevalent [@kuzey2021link]. Indeed, The results on governance could partly explain the prevalence of NGOs in North Africa in the sample dataset, together with religion. Table 8 shows that North Africa fares poorly compared to Sub-Saharan Africa in most governance metrics. In contrast, Table 9 shows that commercial banks and NBFIs are more prevalent in countries with higher institutional quality. 
+Literature shows a positive link between country-level institutional quality and the establishment, growth of private firms [@sobel2008testing]. As captured in the KKM index, institutional quality captures factors that relate directly to the ease of doing business, contract enforcement effectiveness, and the extent of property rights. Where institutional quality is high, we expect private firms to take root, mainly commercial MFIs, primarily commercial banks and NBFIs. On the other hand, where institutional quality is low, NGOs and not-for-profit oriented MFIs may be more prevalent [@kuzey2021link]. Indeed, The results on governance could partly explain the prevalence of NGOs in North Africa in the sample dataset, together with religion. Table 8 shows that North Africa fares poorly compared to Sub-Saharan Africa in most governance metrics. Interestingly, Table 9 shows that commercial banks and NBFIs are more prevalent in countries with higher institutional quality. 
 
 ```{r}
 my_data %>% 
@@ -979,12 +1018,13 @@ my_data %>%
       
       booktabs = TRUE) %>% 
   
-  kable_paper(full_width = FALSE) %>% 
+  kable_paper(full_width = TRUE) %>% 
   
-  footnote(general = "Authors' construction from MIX data",
+  footnote(general = "Source: Authors' construction from MIX data",
            
-           general_title = "Source: ")
+           general_title = "")
 ```
+
 
 ```{r}
 my_data %>% 
@@ -1000,23 +1040,23 @@ my_data %>%
       
       booktabs = TRUE) %>% 
   
-  kable_paper(full_width = FALSE) %>% 
+  kable_paper(full_width = TRUE) %>% 
   
-  footnote(general = "Authors' construction from MIX data",
+  footnote(general = "Source: Authors' construction from MIX data",
            
-           general_title = "Source: ")
+           general_title = "")
 ```
 
 
 ### Private Credit to GDP
 
-The private credit to GDP inversely relates to the prevalence of commercial models of microfinance, with the relationship mostly insignificant. In this case, private credit refers to an aspect of capital markets development, mainly in the banking sector. It is puzzling that a well-developed credit market does not appear to enhance the prevalence of for-profit MFI models. The results could suggest a weak linkage between MFIs and capital markets, more so credit from financial intermediaries. Indeed, MFIs exist to serve markets where mainstream intermediaries neglect, meaning the low presence of mainstream banks means a higher prevalence of MFIs to fill the void [@de2007economics]. Where significant, a unit increase in private credit to GDP corresponds to a 0.894 times lower chance that an MFI will be commercial, profit-oriented ($e^{-0.112}$), which corresponds to an odds of -0.114. 
+The private credit to GDP inversely relates to the prevalence of commercial models of microfinance, with the relationship mostly insignificant. In this case, private credit refers to an aspect of capital markets development, mainly in the banking sector. It is puzzling that a well-developed credit market does not appear to enhance the prevalence of for-profit MFI models. The results could suggest a weak linkage between MFIs and private capital markets, more so credit from financial intermediaries. Indeed, MFIs exist to serve markets where mainstream intermediaries neglect, meaning the low presence of mainstream banks means a higher prevalence of MFIs to fill the void [@de2007economics]. Where significant, a unit increase in private credit to GDP corresponds to a 0.894 times lower chance that an MFI will be commercial, profit-oriented ($e^{-0.112}$), which corresponds to an odds of -0.114. 
 
-As noted, MFIs, especially the NGO type, exist to fill a financing gap that results from the failure of credit markets to reach the financially excluded - the poor, rural dwellers and women savers and borrowers. If mainstream credit markets are functional, then there is no case for the existence of commercial MFIs, because mainstream banks would fill the gap adequately, leaving no business case for commercial MFIs to exist. However, as no credit market is fully efficient, then NGOs would exist to serve niche markets where financial sustainability is unattainable due to a combination of high costs and low revenues [@de2007economics]. On the other hand, if capital markets are not well developed, there exists a market gap that commercial MFIs could exploit to make a profit [@d2013unsubsidized; @armendariz2013subsidy]. 
+As noted, MFIs, especially the NGO type, exist to fill a financing gap that results from the failure of credit markets to reach the financially excluded, that is, the poor, rural dwellers and women savers and borrowers. If mainstream credit markets are functional, then there is no case for the existence of commercial MFIs, because mainstream banks would fill the gap adequately, leaving no business case for commercial MFIs to exist. However, as no credit market is fully efficient, then NGOs would exist to serve niche markets where financial sustainability is unattainable due to a combination of high costs and low revenues [@de2007economics]. On the other hand, if capital markets are not well developed, there exists a market gap that commercial MFIs could exploit to make a profit [@d2013unsubsidized; @armendariz2013subsidy]. 
 
 ### Stock market capitalisation to GDP
 
-Stock market capitalisation to GDP has a significant negative relationship with the prevalence of commercial MFIs. Precisely, a unit increase of stock market capitalisation corresponds to a 0.721 odds of an MFI adopting the for-profit model. Like private credit to GDP, stock market capitalisation to GDP proxies the level of stock market development, an essential source of long time finance for corporations, presumably including MFIs. The equity could be from the public or private equity market, which the stock market would proxy reasonably well. In the case of MFIs in the sample dataset, the capital assets ratio- the ratio of equity capital to assets shows the importance of equity in financing microfinance. Notably, equity is of greater importance to NGOs than commercial MFIs (see Table 10 below), with NBFIs and commercial banks following in that order. If NGOs are the dominant participants in equity markets, then there are lower chances that a well-developed stock market corresponds to more commercial MFIs. The same argument follows that if stock markets are well developed, then private and public credit markets are also well-developed [@schnyder2018twenty]. With well-developed capital markets, financial exclusion incidences are fewer, leaving no vacuum that commercial MFIs could profitably exploit. In such instances, NGOs following the not-for-profit welfare model best serve the few financial exclusion instances.
+Stock market capitalisation to GDP has a significant negative relationship with the prevalence of commercial MFIs. Precisely, a unit increase of stock market capitalisation corresponds to a 0.721 odds of an MFI adopting the for-profit model. Like private credit to GDP, stock market capitalisation to GDP proxies the level of stock market development, an essential source of long time finance for corporations, presumably including MFIs. The equity could be from the public or private equity market, which the stock market would proxy reasonably well. In the case of MFIs in the sample dataset, the capital to assets ratio, that is, the ratio of equity capital to assets shows the importance of equity in financing microfinance. Notably, equity is of greater importance to NGOs than commercial MFIs (see Table 10 below), with NBFIs and commercial banks following in that order. If NGOs are the dominant participants in equity markets, then there are lower chances that a well-developed stock market corresponds to more commercial MFIs. The same argument follows that if stock markets are well developed, then private and public credit markets are also well-developed [@schnyder2018twenty]. With well-developed capital markets, financial exclusion incidences are fewer, leaving no vacuum that commercial MFIs could profitably exploit. In such instances, NGOs following the not-for-profit welfare model best serve the few instances of financial exclusion.
 
 ```{r}
 #################################################
@@ -1039,11 +1079,11 @@ original_data %>%
       
       booktabs = TRUE) %>% 
   
-  kable_paper(full_width = FALSE) %>% 
+  kable_paper(full_width = TRUE) %>% 
   
-  footnote(general = "Authors' construction from MIX data",
+  footnote(general = "Source: Authors' construction from MIX data",
            
-           general_title = "Source: ")
+           general_title = "")
 ```
 
 
@@ -1051,13 +1091,9 @@ original_data %>%
 
 The GDP growth rate is not a significant driver of transformation. Where significant, some of the coefficients are positive, while others are negative. The implication is that the macro-environment may not be a substantial driver of MFIs decisions. Most MFIs in developing countries serve the informal sector's financially excluded population with low linkage to the formal economy [@ghosh2013microfinance]. 
 
-### Regional Divide
-
-It is notable that for the sample data, all the MFIs operating in North Africa are NGOs, while the rest of Africa has a MIX of all forms of MFIs ^[Countries in North Africa in the sample data are Morocco and Tunisia]. Religion may be at play in this case, where interest-based for-profit lending is incompatible with the Muslim faith that dominates North Africa [@hassan2018religious]. Also, as noted, North Africa fares worse in governance (KKM) than sub-Saharan Africa, leading to a flawed property rights regime that discourages private investment [@johnson2002property; @claessens2003financial]. 
-
 ### Time Effects 
 
-There is a strong trend towards commercialisation, with the commercial model increasingly dominating Africa's MFI landscape. All the year dummies are significant in all the models, the lowest level of significance being 10%. Numerous researchers have noted the trend towards the commercial model. Hence, the abundant research seeks to examine the potential effects of the transformation on financial inclusion targets- the financially excluded [@d2017ngos]. Some scholars claim that the trend may harm financial inclusion.  [@meagher2006microfinance; @hartarska2007regulated]. Others hold the opposing view [@duvendack2015mis]. It appears that the financial sustainability school that seeks commercialisation has the upper hand in Africa, at least in the last two decades.  
+The regression model also incorporates year effects although not reported in the regression results tables. There is a strong trend towards commercialisation, with the commercial model increasingly dominating Africa's MFI landscape. All the year dummies are significant in all the models, the lowest level of significance being 10%. Numerous researchers have noted the trend towards the commercial model. Hence, the abundant research seeks to examine the potential effects of the transformation on financial inclusion targets- the financially excluded [@d2017ngos]. Some scholars claim that the trend may harm financial inclusion.  [@meagher2006microfinance; @hartarska2007regulated]. Others hold the opposing view [@duvendack2015mis]. It appears that the financial sustainability school that seeks commercialisation has the upper hand in Africa, at least in the last two decades.  
 
 ```{r, results='asis'}
 ## Running the regressions 
@@ -1119,15 +1155,20 @@ probit_pooled <- glm(dummy ~ age + legal_tradition +
        data = my_data, family = binomial("probit"))
 ```
 
+
+### Regional Divide
+
+It is notable that for the sample data, all the MFIs operating in North Africa are NGOs, while the rest of Africa has a MIX of all forms of MFIs ^[Countries in North Africa in the sample data are Morocco and Tunisia]. Religion may be at play in this case, where interest-based for-profit lending is incompatible with the Muslim faith that dominates North Africa [@hassan2018religious]. Also, as noted, North Africa fares worse in governance (KKM) than sub-Saharan Africa, leading to a flawed property rights regime that discourages private investment [@johnson2002property; @claessens2003financial]. 
+
+
 \newpage
 
 \blandscape
 
 ```{r, results = 'asis'}
 ## Write out the models using stargazer
-stargazer(logit_full, probit_full, logit_3, probit_3, logit_5, probit_5, logit_pooled, probit_pooled, title = "Regression Results - Logit and Probit Models [Coefficients]", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "No"),
-c("Deviance", "677***", "664***", "651***", "648***", "660***", "659***", "619***", "607***"), c("df", "29", "29", "29", "29", "29", "29", "9", "9"),
-c("Data", "Full", "Full", ">3yrs", ">3yrs", ">5yrs", ">5yrs", "Full", "Full")))
+stargazer(logit_full, probit_full, logit_3, probit_3, logit_5, probit_5, logit_pooled, probit_pooled, title = "Regression Results - Logit and Probit Models [Coefficients]", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "No"), c("Deviance", "677***", "664***", "651***", "648***", "660***", "659***", "619***", "607***"), c("df", "29", "29", "29", "29", "29", "29", "9", "9"),
+c("Data", "Full", "Full", ">3yrs", ">3yrs", ">5yrs", ">5yrs", "Full", "Full")), notes.align = "l")
 ```
 
 \elandscape
@@ -1143,19 +1184,19 @@ logit_model <- logistic_reg() %>%
 
 
 ## Multinomial Logit Model
-We extend the analysis to the multinomial logit model. The results are presented in the tables in Appendix 2 to Appendix 5. As in the binary models, the results confirm the factors that drive the conversion of MFIs from NGOs to commercial models. We examine for each variable the interpretation from the model basing our discussion on the results in Appendix 2, which easily generalises to the other Tables in the series. The results show that as the MFI transitions from being new to young, it is less likely to be a bank, NBFI, credit union, or rural bank due to the coefficients' negative sign. Hence, older firms are more likely NGOs in line with the logit model for reasons expounded in the logit model's output.
+We extend the analysis to the multinomial logit model. To reiterate, the multinomial logit model will help uncover factors that drive the choice of a particular legal form by NGOs adopting the commercial model. The results of the model are presented in the tables of Appendix 2 through to Appendix 5. As in the binary models, the results confirm the factors that drive the conversion of MFIs from NGOs to commercial models. We examine for each variable the interpretation from the model basing our discussion on the results in Appendix 2, which easily generalises to the other appendices. The results show that as the MFI transitions from being new to young, it is less likely to be a bank, NBFI, credit union, or rural bank due to the coefficients' negative sign. Hence, older firms are more likely to be NGOs in line with the logit model for reasons expounded in the logit model's output.
 
-Similarly, compared to NGOs, mature MFIs are less likely to be commercial banks, NBFIs, cooperatives or rural banks. The results are in line with the logit model showing that most commercial MFIs are more likely new or young, while NGOs are more likely mature. Again, start-up MFIs are more inclined to the commercial model than the established firms. 
+Similarly, compared to NGOs, mature MFIs are less likely to be commercial banks, NBFIs, cooperatives or rural banks. The results are in line with the logit model showing that most commercial MFIs are more likely new or young, while NGOs are more likely mature. Again, start-up MFIs are more inclined to the commercial model than the established MFIs. 
 
-Relative to common law countries, MFIs in civil law countries less likely to be commercial banks, NBFIs, and rural banks and are more likely to be NGOs. However, in civil law countries, MFIs are more likely to be cooperatives than NGOs. Likewise, relative to common law countries, MFIs in other legal traditions are less likely to be commercial banks and rural banks and more likely to be credit unions or NBFIs. The results illustrate the link between legal tradition and the legal status of MFIs, with NGOs dominating common law countries whilst cooperatives prevail in other legal traditions, including civil law tradition. As noted, the better-developed capital markets in common law countries leave little room for commercial MFIs to thrive. On the contrary, the under-served populace in civil law countries presents ample business opportunities for profit-oriented MFIs [@d2013unsubsidized; @mia2017mission]. 
+Relative to common law countries, MFIs in civil law countries are less likely to be commercial banks, NBFIs, and rural banks and are more likely to be NGOs. However, in civil law countries, MFIs are more likely to be cooperatives than NGOs. Likewise, relative to common law countries, MFIs in other legal traditions are less likely to be commercial banks and rural banks than NGOs and more likely to be credit unions or NBFIs than NGOs. The results illustrate the link between legal tradition and the legal status of MFIs, with NGOs dominating common law countries whilst cooperatives prevail in other legal traditions, including civil law tradition. As noted, the better-developed capital markets in common law countries leave little room for commercial MFIs to thrive. On the contrary, the under-served populace in civil law countries presents ample business opportunities for profit-oriented MFIs [@d2013unsubsidized; @mia2017mission]. 
 
-The results show that as an MFI size increases, the likelihood of shifting from the NGO model to the commercial model rises. However, as firms grow in size, they are less likely to adopt the cooperative model, although the relationship is not significant. MFIs mainly shift from NGOs to commercial banks and NBFIs, but rarely to cooperatives or rural banks. The results highlight the uniqueness of cooperatives and rural banking as microfinance models that serve niche markets. Strictly speaking, cooperatives are quasi-commercial entities. Their mode of operation differs from the other MFIs in terms of clientele and possible geographic reach, hence reducing size. Similarly, rural banks serve marginalised rural dwellers and are more prevalent in common law countries. Noting that most large MFIs are also mature, it follows that the edge granted by maturity also accrues to larger MFIs [@beck2014sme; @kersten2017small].   
+The results show that as an MFI size increases, the likelihood of shifting from the NGO model to the commercial model rises. However, as firms grow in size, they are less likely to adopt the cooperative model, although the relationship is not significant. MFIs mainly shift from NGOs to commercial banks, rural banks, and NBFIs, but rarely to cooperatives or rural banks. The results highlight the uniqueness of cooperatives and rural banking as microfinance models that serve niche markets. Strictly speaking, cooperatives are quasi-commercial entities. Their mode of operation differs from the other MFIs in terms of clientele and possible geographic reach, hence reducing size. Similarly, rural banks serve marginalised rural dwellers and are more prevalent in common law countries. Noting that most large MFIs are also mature, it follows that the edge granted by maturity also accrues to larger MFIs [@beck2014sme; @kersten2017small].   
 
-Also, as country-level institutional quality rises, MFIs are more likely to be commercial banks and NBFIs, and less likely cooperatives and rural banks relative to NGOs. Cooperatives and rural banks are less sensitive to institutional quality matters courtesy of their unique markets, even more so than NGOs [@sobel2008testing]. As noted, the commercial, for-profit model could only thrive best in countries where institutional quality is high. However, cooperatives and rural bank in Africa serve unique markets, with rural banks primarily focused on informal rural economies that may have a weak linkage to the formal economy, making governance and institutional quality less relevant.
+Also, as country-level institutional quality rises, MFIs are more likely to be commercial banks and NBFIs, and less likely cooperatives and rural banks relative to NGOs. Cooperatives and rural banks are less sensitive to institutional quality matters courtesy of their unique markets, even more so than NGOs [@sobel2008testing]. As noted earlier, the commercial, for-profit model could only thrive best in countries where institutional quality is high. However, cooperatives and rural banks in Africa serve unique markets, with rural banks primarily focused on informal rural economies that may have a weak linkage to the formal economy, making governance and institutional quality less relevant.
 
-Capital market development- both stock market to GDP and private credit to GDP follow a similar pattern. As in the logit model, MFIs located in countries scoring high in private credit to GDP and stock market capitalisation to GDP are less likely to go commercial and more likely to be NGOs. We have argued before that well developed financial market implies a smaller customer base for MFIs and hence the result. The result also concurs with the observation of legal tradition. Because capital markets in civil law countries are less developed, the void tends to be profitably filled by commercial MFIs.In common law countries, capital markets leave few profitable opportunities which NGOs serve [@d2013unsubsidized; @armendariz2013subsidy].
+Capital market development by way of both stock market to GDP and private credit to GDP, follow a similar pattern. As in the logit model, MFIs located in countries scoring high in private credit to GDP and stock market capitalisation to GDP are less likely to go commercial and more likely to be NGOs. We have argued before that well developed financial market implies a smaller customer base for MFIs and hence the result. The result also concurs with the observation about legal tradition. Because capital markets in civil law countries are less developed, the void tends to be profitably filled by commercial MFIs.In common law countries, capital markets leave few profitable opportunities which NGOs serve [@d2013unsubsidized; @armendariz2013subsidy].
 
-Finally, high GDP growth rates increase the likelihood that an MFI will be a commercial bank, NBFI, or rural bank but less likely to be a cooperative or rural bank. As is the case with institutional quality, the economic environment matters most for commercial MFIs that target profit. However, NGOs, cooperatives and rural bank may better serve communities undergoing adverse economic experiences [@ghosh2013microfinance]. Cooperatives obtain capital from members and are obligated to attend to the members regardless of the economic uncertainties. NGOs and rural banks specifically target marginalised people. Economic downturns are more likely to raise the level of exclusion and make these forms of MFIs even more relevant [@schnyder2018twenty].  
+Finally, high GDP growth rates increase the likelihood that an MFI will be a commercial bank, NBFI, or rural bank than NGOs but less likely to be a cooperative or rural bank. As is the case with institutional quality, the economic environment matters most for commercial MFIs that target profit. However, NGOs, cooperatives and rural bank may better serve communities undergoing adverse economic experiences [@ghosh2013microfinance]. Cooperatives obtain capital from members and are obligated to attend to the members regardless of economic uncertainties. NGOs and rural banks specifically target marginalised people. Economic downturns are more likely to raise the level of exclusion and make these forms of MFIs even more relevant [@schnyder2018twenty].  
 
 ```{r, results = 'hide'}
 ## Full dataset
@@ -1174,14 +1215,14 @@ multinom_full_no_coop_ny <- multinom(currentlegalstatus ~ age + legal_tradition 
 \newpage
 
 ## Overall Model Fit
-To assess the overall model fit, we generate the `confusion matrix`. For this purpose, we use the models developed by using the whole dataset- Table 11 for the logit model and Appendix 2 for the multinomial logit model.
+To assess the overall model fit, we generate the `confusion matrix` and statistics in table 12 and figure 4, respectively. For this purpose, we use the models developed by using the whole dataset- Table 11 for the logit model and Appendix 2 for the multinomial logit model.
 
 ### Logit Model
-Overall, the models are highly significant (at 1% significance levels, see Table 11), meaning that they explain why MFIs tend to adopt to given model better than guessing the most prevalent outcome- every MFI in the sample is not an NGO. In the first row of Table 12, we see that the logit model predicted correctly that 304 NGOs were NGOs. The model also accurately predicts that an MFI belongs to other legal forms (Bank, NBFI, Coop, Rural Bank) when they belong to these forms. However, the model fails by predicting 976 cases of MFIs as other legal forms when they are NGOs. Similarly, the model wrongly classifies 126 cases of MFIs of other legal forms as NGOs.  
+Overall, the models are highly significant (at 1% significance levels, see Table 11), meaning that they explain why MFIs tend to adopt a given model better than guessing the most prevalent outcome, that is, every MFI in the sample is not an NGO. In the first row of Table 12, we see that the logit model predicted correctly that 304 NGOs were NGOs. The model also accurately predicts that an MFI belongs to other legal forms (Bank, NBFI, Coop, Rural Bank) when they belong to these forms. However, the model fails by predicting 976 cases of MFIs as other legal forms when they are NGOs. Similarly, the model wrongly classifies 126 cases of MFIs of other legal forms as NGOs.  
 
 Overall, the logit model accurately predicts the legal status of an MFI 77% of the time ^[The accuracy is computed as (304 + 3376)/(304 + 976 + 126 + 3376) = 0.77]. The prediction is within the confidence interval captured by the entries `AccuracyLower` and `AccuracyUpper`. If we were to guess that every MFI in the dataset follows the commercial model (that is, not an NGO), we would be accurate 73.2% of the time (referred to as the No Information Rate (NIR) in the `confusion matrix`) [@cavalin2018confusion]. The p-value shows that the accuracy is not due to chance with over 99% confidence, meaning that the accuracy is significantly greater than the NIR [@kleinbaum2002logistic]. 
 
-The model has low `sensitivity`, though, at 23.75%. In this case, sensitivity is a model's ability to accurately predict that an MFI is an NGO when it is an NGO [@marom2010using]. The low `sensitivity` could, in part, be due to the low `prevalence` of NGOs in the dataset (at 26.77%) relative to the commercial forms of MFIs (73.23%). However, the model has very high `specificity` at 96.4%. Specificity is the capacity of the model to predict that an MFI follows the commercial model (NOT an NGO) when it following the commercial model (is NOT an NGO) [@zeng2020confusion]. Hence, it appears that commercial MFIs have distinct characters that easily allow the model to distinguish them from NGOs. The other metric of interest is the `balanced accuracy` that averages `sensitivity` and `specificity` at 60% [@gorzalczany2016multi]. Overall, the model does better than guessing that every MFI in the sample dataset follows the commercial model (or is NOT an NGO) [@hosmer2013applied]. 
+The model has low `sensitivity`, though, at 23.75%. In this case, sensitivity is a model's ability to accurately predict that an MFI is an NGO when it is an NGO [@marom2010using]. The low `sensitivity` could, in part, be due to the low `prevalence` of NGOs in the dataset (at 26.77%) relative to the commercial forms of MFIs (73.23%). However, the model has very high `specificity` at 96.4%. Specificity is the capacity of the model to predict that an MFI follows the commercial model (NOT an NGO) when it is following the commercial model (is NOT an NGO) [@zeng2020confusion]. Hence, it appears that commercial MFIs have distinct characters that easily allow the model to distinguish them from NGOs. The other metric of interest is the `balanced accuracy` that averages `sensitivity` and `specificity` at 60% [@gorzalczany2016multi]. Overall, the model does better than guessing that every MFI in the sample dataset follows the commercial model (or is NOT an NGO) [@hosmer2013applied]. 
 
 
 ```{r}
@@ -1196,24 +1237,21 @@ tidy_conf_mat <- my_data %>% conf_mat(truth = dummy, estimate = .pred_class)
 
 ###############################################################################
 
-tidy_conf_mat
-
 tidy_conf_mat %>% summary() %>% kbl(., caption = "Confusion Matrix and Statistics for the Logit Model", 
       
       booktabs = TRUE) %>% 
   
   kable_paper(full_width = TRUE) %>% 
   
-  footnote(general = "Authors' construction",
+  footnote(general = "Source: Authors' construction",
            
-           general_title = "Source: ", 
+           general_title = "", 
            
            number = "Accuracy > NoInformationRate is significant at 1% confidence level, p = 0.0000",
   
   number_title = "Notes: ")
 
 ################################################################
-  
 ```
 
 
@@ -1221,26 +1259,22 @@ tidy_conf_mat %>% summary() %>% kbl(., caption = "Confusion Matrix and Statistic
 \newpage
 \blandscape
 
-```{r}
-tidy_conf_mat %>% autoplot(type = "mosaic") 
-```
-
-\newpage
-
-```{r}
+```{r, fig.cap="Confusion Matrix and ROC Curve", fig.width=10, fig.height=5}
 my_data <- my_tidy_logit %>% predict(type = "prob", new_data = my_data) %>% bind_cols(my_data)
-
 my_data %>% roc_auc(truth = dummy, .pred_ngo)
 
-my_data %>% roc_curve(truth = dummy, .pred_ngo) %>% autoplot()
+tidy_conf_mat %>% autoplot(type = "heatmap", title = "Confusion Matrix") +
+tidy_conf_mat %>% autoplot(type = "mosaic", title = "Visualization of the Confusion matrix")/
+my_data %>% roc_curve(truth = dummy, .pred_ngo) %>% autoplot(title = "ROC Curve")
 ```
 
-
-
+\newpage
 \elandscape
+
+
 \newpage
 ### Multinomial Logit Model
-As noted, I develop the `confusion matrix` using the `multinomial logit` with the full data (Table 13). The matrix shows that the overall `accuracy` is 56.5%. Note that the overall accuracy is one value for the entire model, the `No Information Rate (NIR)`. Overall `accuracy`, in this case, is the ability to accurately predict that an MFI is an NGO when it is an NGO, a commercial bank when it is a commercial bank, and so on. If we were to guess that every MFI in the model is the cooperative - the most prevalent legal form- we would be right 39.3% of the time, the NIR. The p-value shows that the overall `accuracy` metric is significantly different from the `NIR`. Although the multinomial logit model has a markedly lower accuracy than the logit model, it has a far more demanding task of distinguishing 5 legal forms of MFIs instead of 2 for the logit model [@kwak2002multinomial]. 
+As noted earlier, I develop the `confusion matrix` using the `multinomial logit` with the full data (Table 13). The matrix shows that the overall `accuracy` is 56.5%. Note that the overall accuracy is one value for the entire model, the `No Information Rate (NIR)`. Overall `accuracy`, in this case, is the ability to accurately predict that an MFI is an NGO when it is an NGO, a commercial bank when it is a commercial bank, and so on. If we were to guess that every MFI in the model is the cooperative - the most prevalent legal form- we would be right 39.3% of the time, the NIR. The p-value shows that the overall `accuracy` metric is significantly different from the `NIR`. Although the multinomial logit model has a markedly lower accuracy than the logit model, it has a far more demanding task of distinguishing 5 legal forms of MFIs instead of 2 for the logit model [@kwak2002multinomial]. 
 
 The model's `sensitivity` varies from a low of 47.1% for NBFI to a high of 61.8% for NGOs. The `specificity` is relatively high, ranging from 80.1% for NBFIs to 99.22% for rural banks [@ginting2019hate]. NGOs have a `specificity` of 81.4%, meaning that the model can predict that an MFI is not an NGO when it is not an NGO 81.4% of the time. For rural banks, the model can correctly predict over 99% of the time that an MFI is not a rural bank when it is not a rural bank. The `balanced accuracy` is also reasonably high, with the lowest being NBFIs at 63.9% and the highest at 79.26% for rural banks [@hedeker2003mixed]. 
 
@@ -1293,9 +1327,9 @@ df %>%
   
   kable_paper(full_width = FALSE) %>% 
   
-  footnote(general = "Authors' construction",
+  footnote(general = "Source: Authors' construction",
            
-  general_title = "Source: ",
+  general_title = "",
   
   number = "Accuracy > NoInformationRate is significant at 1% confidence level, p = 0.0000",
   
@@ -1305,10 +1339,10 @@ df %>%
 \newpage
 
 ## Regression Diagnostics
-This section examines three issues that arise in logit models; extreme values, multicollinearity, and linearity, respectively.
+This section examines three issues that arise in logit models: extreme values, multicollinearity, and linearity, respectively.
 
 ### Extreme values
-Figure 4 below shows that the data indeed has influential values. For robustness, we winsorise the data, removing the top 10% and the bottom 10%. Still, the results remain robust, as regression results in Table 14 shows. It is notable that apart from the change in coefficients' value, the signs remain the same, meaning that influential observations are not a significant issue. 
+Figure 4 below shows that the data indeed has influential values. For robustness, we winsorise the data, removing the top 10% and the bottom 10%. Still, the results remain robust, as regression results in Table 14 shows. It is notable that apart from the change in coefficients' value, the signs remain the same, meaning that influential observations (outliers) are not a significant issue. 
 
 ```{r}
 remove_outliers <- function(x, na.rm = TRUE, ...) {
@@ -1375,7 +1409,7 @@ plot(logit_full, which = 4, id.n = 3, main = "")
 \elandscape
 
 ### Multicollinearity
-The problem of multicollinearity among independent variables leads to unstable coefficients. In the model, however, multicollinearity is not a significant issue as in all cases, the variance inflation factors(VIFs) are below the 5 (sometimes 10) threshold that several researchers recommend [@gujarati2012econometrics]. Table 15 shows the VIFs for each variable. 
+The problem of multicollinearity among independent variables leads to unstable coefficients. In the baseline model, however, multicollinearity is not a significant issue because as per table 15 in all cases, the variance inflation factors(VIFs) are below the 5 (sometimes 10) threshold that several researchers recommend [@gujarati2012econometrics]. Table 15 shows the VIFs for each variable. 
 
 ```{r}
 car::vif(logit_full) %>% 
@@ -1386,13 +1420,13 @@ car::vif(logit_full) %>%
   
   kable_paper(full_width = TRUE) %>% 
   
-  footnote(general = "Authors' construction",
+  footnote(general = "Source: Authors' construction",
            
-           general_title = "Source: ")
+           general_title = "")
 ```
 
 ### Linearity assumptions
-Here, we check the linear relationship between independent numeric variables and the logit of the outcome by visually inspecting the scatter plot between each predictor and the logit values. As Figure 5 below shows, most of the variables could reasonably fit a linear model, though not perfectly [@cheng2007testing]. The fitted line uses the Locally Weighted Scatterplot Smoothing (LOESS) method hence the perceived non-linearity. 
+Here, we check the linear relationship between independent numeric variables and the logit of the outcome by visually inspecting the scatter plot between each predictor and the logit values. As Figure 5 below shows, most of the variables could reasonably fit a linear model, though not perfectly [@cheng2007testing]. The fitted line uses the Locally Weighted Scatterplot Smoothing (LOESS) method, hence the perceived non-linearity. 
 
 \blandscape
 
@@ -1431,9 +1465,9 @@ ggplot(linearity, aes(logit, predictor.value))+
 In many cases, it is unlikely that a credit union starts as an NGO, given that they mostly serve clients with similar professional base and geographic background. For this reason, we run a regression, excluding cooperatives with the results displayed in Appendix 1. The results remain robust in this case, noting that signs of the coefficients do not change. 
 
 # Conclusion 
-This article examined the factors that drive the transformation of MFIs from the NGO not-for-profit model to the commercial, for-profit model focusing on Africa. The analysis shows that at the MFI level, there are two critical factors; age, legal tradition, and size matter. At the aggregate level, it is the country institutional quality and stock market capitalisation that matter. Specifically, older firms are most likely to follow the not-for-profit model, while newer firms are most likely commercial. We expect that older firms are better at attracting donations and subsidies and hence still follow the earlier tradition of microfinance as a welfare tool to aid the financially excluded [@d2017ngos]. For legal tradition, MFIs located in civil law countries are least likely to follow the commercial model relative to those in common law countries. The results align with the finance and law literature, where civil law countries have weaker capital markets. Hence, MFIs have a market void to fill profitably, unlike in common law countries where mainstream markets already fill much of the gap leaving relatively fewer profit opportunities  [@la2013law; @schnyder2018twenty].MFIs in countries following other legal traditions other than common law and civil law are most likely to follow the commercial model. 
+This article examined the factors that drive the transformation of MFIs from the NGO, not-for-profit model to the commercial, for-profit model, focusing on Africa. The analysis shows that at the MFI level, there are three critical factors; age, legal tradition, and size matter. At the aggregate level, it is the country institutional quality and stock market capitalisation that matter. Specifically, older firms are most likely to follow the not-for-profit model, while newer firms are most likely commercial. We expect that older firms are better at attracting donations and subsidies and hence still follow the earlier tradition of microfinance as a welfare tool to aid the financially excluded [@d2017ngos]. For legal tradition, MFIs located in civil law countries are the least likely to follow the commercial model relative to those in common law countries. The results align with the finance and law literature, where civil law countries have weaker capital markets. Hence, MFIs have a market void to fill profitably, unlike in common law countries where mainstream markets already fill much of the gap, leaving relatively fewer profit opportunities  [@la2013law; @schnyder2018twenty]. MFIs in countries following other legal traditions other than common law and civil law, are most likely to follow the commercial model. 
 
-Turning to size, larger firms tend to adopt the commercial model compared to relatively younger firms. We expect that larger firms are better at attracting commercial capital courtesy of the goodwill and the collateral to pledge. Institutional quality relates positively to adopting the commercial model at the country level, while stock market capitalisation has the opposite effect. Institutional quality has this effect due to the ease of contracting, contract enforcement, and property rights [@claessens2003financial]. Private credit to GDP and GDP growth rates are not significant drivers of the conversion of MFIs. However, the coefficients' signs indicate that private credit to GDP, like the stock market to GDP ratio, is inversely related to the probability of transformation. At the same time, GDP growth shows mixed effects.
+Turning to size, larger firms tend to adopt the commercial model compared to relatively younger firms. We expect that larger firms are better at attracting commercial capital courtesy of the goodwill and the collateral to pledge when seeking funds publicly. Institutional quality relates positively to adopting the commercial model at the country level, while stock market capitalisation has the opposite effect. Institutional quality has this effect due to the ease of contracting, contract enforcement, and property rights [@claessens2003financial]. Private credit to GDP and GDP growth rates are not significant drivers of the conversion of MFIs. However, the coefficients' signs indicate that private credit to GDP, like the stock market to GDP ratio, is inversely related to the probability of transformation. At the same time, GDP growth shows mixed effects, with mostly positive coefficients being significant.
 
 # **References**
 
@@ -1522,9 +1556,9 @@ legal %>% rename(Country = country, Legal_Tradition = trad) %>%
   
   column_spec(1:3, width = "20em") %>% 
   
-  footnote(general = "Oto-Peralías and Romero-Ávila (2014)",
+  footnote(general = "Source: Oto-Peralías and Romero-Ávila (2014)",
            
-           general_title = "Source: ",
+           general_title = "",
            
            number = c("Other legal traditions include Spanish, Portuguese, Belgian, and Italian", 
                       
