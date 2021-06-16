@@ -76,7 +76,6 @@ theme_set(ggthemes::theme_clean())
 #########################################
 ```
 
-\newpage
 
 >**Abstract**
 
@@ -1212,7 +1211,6 @@ multinom_full_ny <- multinom(currentlegalstatus ~ age + legal_tradition + assets
 multinom_full_no_coop_ny <- multinom(currentlegalstatus ~ age + legal_tradition + assets + kkm + pcrdbgdp + stmktcap + gdp_growth_annual, data = (my_data %>% filter(currentlegalstatus != "Credit Union/ Cooperative ")))
 ```
 
-\newpage
 
 ## Overall Model Fit
 To assess the overall model fit, we generate the `confusion matrix` and statistics in table 12 and figure 4, respectively. For this purpose, we use the models developed by using the whole dataset- Table 11 for the logit model and Appendix 2 for the multinomial logit model.
@@ -1260,9 +1258,13 @@ tidy_conf_mat %>% summary() %>% kbl(., caption = "Confusion Matrix and Statistic
 \blandscape
 
 ```{r, fig.cap="Confusion Matrix and ROC Curve", fig.width=10, fig.height=5}
+## Generating predictions 
 my_data <- my_tidy_logit %>% predict(type = "prob", new_data = my_data) %>% bind_cols(my_data)
+
+## ROC Area under curve
 my_data %>% roc_auc(truth = dummy, .pred_ngo)
 
+## Confusion matrix visualization 
 tidy_conf_mat %>% autoplot(type = "heatmap", title = "Confusion Matrix") +
 tidy_conf_mat %>% autoplot(type = "mosaic", title = "Visualization of the Confusion matrix")/
 my_data %>% roc_curve(truth = dummy, .pred_ngo) %>% autoplot(title = "ROC Curve")
@@ -1395,8 +1397,7 @@ probit_full_wins_ny <- glm(dummy ~ age + legal_tradition +
 
 ```{r, results = 'asis'}
 ## Write out the models using stargazer
-stargazer(logit_full_wins, probit_full_wins, logit_full_wins_ny, probit_full_wins_ny, title = "Regression Results - Logit and Probit Models for Winsorized Data", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "Yes", "Yes", "No", "No"),                      
-c("Deviance", "664***", "657***", "602***", "595***"), c("df", "29", "29", "9", "9"), c("Data", "Winsorized", "Winsorized", "Winsorized", "Winsorized")))
+stargazer(logit_full_wins, probit_full_wins, logit_full_wins_ny, probit_full_wins_ny, title = "Regression Results - Logit and Probit Models for Winsorized Data", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", add.lines = list(c("Year Effects", "Yes", "Yes", "No", "No"), c("Deviance", "664***", "657***", "602***", "595***"), c("df", "29", "29", "9", "9"), c("Data", "Winsorized", "Winsorized", "Winsorized", "Winsorized")), notes.align = "l")
 ```
 
 
@@ -1492,8 +1493,8 @@ probit_pooled_no_coop <- glm(dummy ~ age + legal_tradition +
        pcrdbgdp + stmktcap + gdp_growth_annual + factor(year), 
        data = (my_data %>% filter(currentlegalstatus != "Credit Union/ Cooperative ")), family = binomial("probit"))
 
-stargazer(logit_pooled_no_coop, probit_pooled_no_coop, title = "Regression Results - Logit and Probit Models with Data Excluding Cooperatives", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "Yes", "Yes"),                      
-c("Deviance", "664***", "657***"), c("df", "29", "29"), c("Data", "No Credit Unions", "No Credit Unions")))
+stargazer(logit_pooled_no_coop, probit_pooled_no_coop, title = "Regression Results - Logit and Probit Models with Data Excluding Cooperatives", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", add.lines = list(c("Year Effects", "Yes", "Yes"),                      
+c("Deviance", "664***", "657***"), c("df", "29", "29"), c("Data", "No Credit Unions", "No Credit Unions")), notes.align = "l")
 ```
 
 \newpage
@@ -1502,7 +1503,7 @@ c("Deviance", "664***", "657***"), c("df", "29", "29"), c("Data", "No Credit Uni
 
 ```{r, results='asis'}
 ## Results 
-stargazer(multinom_full, title = "Regression Results - Multinomial Logit Model- Full Data", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes"), c("Data", "Full", "Full", "Full", "Full", "Full")))
+stargazer(multinom_full, title = "Regression Results - Multinomial Logit Model- Full Data", font.size = "footnotesize", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes"), c("Data", "Full", "Full", "Full", "Full", "Full")), notes.align = "l")
 ```
 
 \newpage
@@ -1510,7 +1511,7 @@ stargazer(multinom_full, title = "Regression Results - Multinomial Logit Model- 
 ## Appendix 3: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives
 ```{r, results='asis'}
 ## Results 
-stargazer(multinom_no_coop, title = "Regression Results - Multinomial Logit Model- Full Data Without Cooperatives", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes"), c("Data", "Full", "Full", "Full", "Full", "Full")))
+stargazer(multinom_no_coop, title = "Regression Results - Multinomial Logit Model- Full Data Without Cooperatives", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes"), c("Data", "Full", "Full", "Full", "Full", "Full")), notes.align = "l")
 ```
 
 \newpage
@@ -1518,7 +1519,7 @@ stargazer(multinom_no_coop, title = "Regression Results - Multinomial Logit Mode
 ## Appendix 4: Multinomial Logit Model With Full Dataset But No Year Effects
 ```{r, results='asis'}
 ## Results 
-stargazer(multinom_full_ny, title = "Regression Results - Multinomial Logit Model- Full Data Without Year Effects", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "Yes", "No", "No", "No", "No"), c("Data", "No Coop", "No Coop", "No Coop", "No Coop", "No Coop")))
+stargazer(multinom_full_ny, title = "Regression Results - Multinomial Logit Model- Full Data Without Year Effects", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", add.lines = list(c("Year Effects", "Yes", "No", "No", "No", "No"), c("Data", "No Coop", "No Coop", "No Coop", "No Coop", "No Coop")), notes.align = "l")
 ```
 
 \newpage
@@ -1526,7 +1527,7 @@ stargazer(multinom_full_ny, title = "Regression Results - Multinomial Logit Mode
 ## Appendix 5: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives and Year Effects
 ```{r, results='asis'}
 ## Results 
-stargazer(multinom_full_no_coop_ny, title = "Regression Results - Multinomial Logit Model- Full Data Excluding Cooperatives and Year Effects", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "No", "No", "No", "No", "No"), c("Data", "Full", "Full", "Full", "Full", "Full")))
+stargazer(multinom_full_no_coop_ny, title = "Regression Results - Multinomial Logit Model- Full Data Excluding Cooperatives and Year Effects", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "No", "No", "No", "No", "No"), c("Data", "Full", "Full", "Full", "Full", "Full")), notes.align = "l")
 ```
 
 \newpage

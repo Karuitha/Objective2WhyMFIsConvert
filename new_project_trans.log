@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  16 JUN 2021 00:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  16 JUN 2021 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -808,313 +808,313 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 113
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+)
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 117.
+(Font)              scaled to size 10.0pt on input line 115.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 138.
+(Font)              scaled to size 14.4pt on input line 136.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 138.
-[2] [3] [4]
+(Font)              scaled to size 14.4pt on input line 136.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 414.
+(Font)              scaled to size 12.0pt on input line 412.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 418.
+(Font)              <10> on input line 416.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 418.
+(Font)              <7> on input line 416.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 418.
+(Font)              <5> on input line 416.
+[4]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 451.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 451.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 449.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 451.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 449.
 
-[5] [6] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
-le.1}) has been already used, duplicate ignored
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 449.
+
+[5] [6pdfTeX warning (ext4): destination with the same identifier (name{table.1
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.579 T
-       urning to Figure 3, country-level governance matter more for commercial]
-[8]
-<new_project_trans_files/figure-latex/unnamed-chunk-7-1.pdf, id=69, 1011.78pt x
+l.561 
+      ] [7]
+<new_project_trans_files/figure-latex/unnamed-chunk-7-1.pdf, id=65, 1011.78pt x
  650.43pt>
 File: new_project_trans_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (
 type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-7-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-7-1
-.pdf  used on input line 605.
+.pdf  used on input line 603.
 (pdftex.def)             Requested size: 635.989pt x 408.85007pt.
-<new_project_trans_files/figure-latex/unnamed-chunk-12-1.pdf, id=70, 1011.78pt 
+<new_project_trans_files/figure-latex/unnamed-chunk-12-1.pdf, id=66, 1011.78pt 
 x 650.43pt>
 File: new_project_trans_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file 
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-12-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-12-
-1.pdf  used on input line 614.
+1.pdf  used on input line 612.
 (pdftex.def)             Requested size: 635.989pt x 408.85007pt.
-<new_project_trans_files/figure-latex/unnamed-chunk-13-1.pdf, id=71, 1011.78pt 
+<new_project_trans_files/figure-latex/unnamed-chunk-13-1.pdf, id=67, 1011.78pt 
 x 650.43pt>
 File: new_project_trans_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file 
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-13-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-13-
-1.pdf  used on input line 623.
+1.pdf  used on input line 621.
 (pdftex.def)             Requested size: 635.989pt x 408.85007pt.
-[9pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.630 \end{landscape}
+l.628 \end{landscape}
                       <./new_project_trans_files/figure-latex/unnamed-chunk-7-1
-.pdf>] [10pdfTeX warning (ext4): destination with the same identifier (name{fig
-ure.2}) has been already used, duplicate ignored
+.pdf>] [9pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.630 \end{landscape}
+l.628 \end{landscape}
                       <./new_project_trans_files/figure-latex/unnamed-chunk-12-
-1.pdf>] [11pdfTeX warning (ext4): destination with the same identifier (name{fi
+1.pdf>] [10pdfTeX warning (ext4): destination with the same identifier (name{fi
 gure.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.630 \end{landscape}
+l.628 \end{landscape}
                       <./new_project_trans_files/figure-latex/unnamed-chunk-13-
 1.pdf>]
-Overfull \hbox (0.99934pt too wide) in paragraph at lines 711--711
+Overfull \hbox (0.99934pt too wide) in paragraph at lines 709--709
 []\T1/SourceSansPro-LF/m/n/10 (-20) education|  
  []
 
 
-Overfull \hbox (42.90329pt too wide) in paragraph at lines 711--711
+Overfull \hbox (42.90329pt too wide) in paragraph at lines 709--709
 []\T1/SourceSansPro-LF/m/n/10 (-20) gdp_growth_annual|  
  []
 
-[12pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
+[11pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.732 \newpage
+l.730 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.732 \newpage
+l.730 \newpage
               
 
 
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 816.
+(Font)              scaled to size 8.0pt on input line 814.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 816.
-[13pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
+(Font)              scaled to size 6.0pt on input line 814.
+[12pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.824 
+l.822 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.824 
-      ] [14pdfTeX warning (ext4): destination with the same identifier (name{ta
+l.822 
+      ] [13pdfTeX warning (ext4): destination with the same identifier (name{ta
 ble.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.896 
+l.894 
       pdfTeX warning (ext4): destination with the same identifier (name{table.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.896 
-      ] [15] [16pdfTeX warning (ext4): destination with the same identifier (na
+l.894 
+      ] [14] [15pdfTeX warning (ext4): destination with the same identifier (na
 me{table.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1075 
+l.1073 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1075 
-       ] [17pdfTeX warning (ext4): destination with the same identifier (name{t
+l.1073 
+       ] [16pdfTeX warning (ext4): destination with the same identifier (name{t
 able.10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1136 \newpage
+l.1134 \newpage
                ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 1147.
-[18
+(Font)              scaled to size 8.0pt on input line 1145.
+[17
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.11}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1197 \end{landscape}
-                      ] [19
+l.1195 \end{landscape}
+                      ] [18
 
-] [20]
+]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-297.
+293.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [21] [22pdfTeX warning (ext4): destination with the same identifier (name{tab
+) [19] [20pdfTeX warning (ext4): destination with the same identifier (name{tab
 le.12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1376 \begin{landscape}
+l.1372 \begin{landscape}
                         ]
-<new_project_trans_files/figure-latex/unnamed-chunk-28-1.pdf, id=225, 722.7pt x
+<new_project_trans_files/figure-latex/unnamed-chunk-28-1.pdf, id=217, 722.7pt x
  361.35pt>
 File: new_project_trans_files/figure-latex/unnamed-chunk-28-1.pdf Graphic file 
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-28-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-28-
-1.pdf  used on input line 1387.
+1.pdf  used on input line 1383.
 (pdftex.def)             Requested size: 635.97797pt x 317.98898pt.
-[23
+[21
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1394 \newpage
+l.1390 \newpage
                 <./new_project_trans_files/figure-latex/unnamed-chunk-28-1.pdf>
-] [24
+] [22
 
-] [25pdfTeX warning (ext4): destination with the same identifier (name{table.13
+] [23pdfTeX warning (ext4): destination with the same identifier (name{table.13
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1535 \begin{landscape}
-                        ] [26pdfTeX warning (ext4): destination with the same i
+l.1531 \begin{landscape}
+                        ] [24pdfTeX warning (ext4): destination with the same i
 dentifier (name{table.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1535 \begin{landscape}
+l.1531 \begin{landscape}
                         ]
-<new_project_trans_files/figure-latex/unnamed-chunk-33-1.pdf, id=260, 982.67125
+<new_project_trans_files/figure-latex/unnamed-chunk-33-1.pdf, id=251, 982.67125
 pt x 607.26875pt>
 File: new_project_trans_files/figure-latex/unnamed-chunk-33-1.pdf Graphic file 
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-33-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-33-
-1.pdf  used on input line 1539.
+1.pdf  used on input line 1535.
 (pdftex.def)             Requested size: 635.99979pt x 393.03357pt.
-[27pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1546 \end{landscape}
+l.1542 \end{landscape}
                        <./new_project_trans_files/figure-latex/unnamed-chunk-33
--1.pdf>] [28pdfTeX warning (ext4): destination with the same identifier (name{t
+-1.pdf>] [26pdfTeX warning (ext4): destination with the same identifier (name{t
 able.15}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1591 \begin{landscape}
+l.1587 \begin{landscape}
                         
 
 
 ]
-<new_project_trans_files/figure-latex/unnamed-chunk-35-1.pdf, id=283, 1001.7425
+<new_project_trans_files/figure-latex/unnamed-chunk-35-1.pdf, id=275, 1001.7425
 pt x 622.325pt>
 File: new_project_trans_files/figure-latex/unnamed-chunk-35-1.pdf Graphic file 
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-35-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-35-
-1.pdf  used on input line 1595.
+1.pdf  used on input line 1591.
 (pdftex.def)             Requested size: 636.0077pt x 395.115pt.
-[29pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+[27pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1602 \end{landscape}
+l.1598 \end{landscape}
                        <./new_project_trans_files/figure-latex/unnamed-chunk-35
--1.pdf>] [30
+-1.pdf>] [28
 
 
-] [31] [32] [33] [34] [35pdfTeX warning (ext4): destination with the same ident
+] [29] [30] [31] [32] [33pdfTeX warning (ext4): destination with the same ident
 ifier (name{table.16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2200 \newpage
-               ] [36pdfTeX warning (ext4): destination with the same identifier
+l.2196 \newpage
+               ] [34pdfTeX warning (ext4): destination with the same identifier
  (name{table.17}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2258 \newpage
-               ] [37pdfTeX warning (ext4): destination with the same identifier
+l.2254 \newpage
+               ] [35pdfTeX warning (ext4): destination with the same identifier
  (name{table.18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2317 \newpage
-               ] [38pdfTeX warning (ext4): destination with the same identifier
+l.2313 \newpage
+               ] [36pdfTeX warning (ext4): destination with the same identifier
  (name{table.19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2376 \newpage
-               ] [39pdfTeX warning (ext4): destination with the same identifier
+l.2372 \newpage
+               ] [37pdfTeX warning (ext4): destination with the same identifier
  (name{table.20}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2435 \newpage
+l.2431 \newpage
                ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 2453.
+(Font)              scaled to size 7.0pt on input line 2449.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 2454.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2459.
-[40pdfTeX warning (ext4): destination with the same identifier (name{table.21})
+(Font)              scaled to size 5.0pt on input line 2450.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2455.
+[38pdfTeX warning (ext4): destination with the same identifier (name{table.21})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2459 \end{document}
+l.2455 \end{document}
                      ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2459.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2455.
 (./new_project_trans.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2459.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2459.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2455.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2455.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15698 strings out of 481745
- 236438 string characters out of 5930830
- 533141 words of memory out of 5000000
+ 15696 strings out of 481745
+ 236424 string characters out of 5930830
+ 534112 words of memory out of 5000000
  30004 multiletter control sequences out of 15000+600000
  714581 words of font info for 235 fonts, out of 8000000 for 9000
  891 hyphenation exceptions out of 8191
@@ -1136,10 +1136,10 @@ r6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts
 usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on new_project_trans.pdf (40 pages, 7249528 bytes).
+Output written on new_project_trans.pdf (38 pages, 7123644 bytes).
 PDF statistics:
- 701 PDF objects out of 1000 (max. 8388607)
- 617 compressed objects within 7 object streams
- 248 named destinations out of 1000 (max. 500000)
+ 692 PDF objects out of 1000 (max. 8388607)
+ 610 compressed objects within 7 object streams
+ 246 named destinations out of 1000 (max. 500000)
  26951 words of extra memory for PDF output out of 29859 (max. 10000000)
 
