@@ -1222,6 +1222,8 @@ Overall, the logit model accurately predicts the legal status of an MFI 77% of t
 
 The model has low `sensitivity`, though, at 23.75%. In this case, sensitivity is a model's ability to accurately predict that an MFI is an NGO when it is an NGO [@marom2010using]. The low `sensitivity` could, in part, be due to the low `prevalence` of NGOs in the dataset (at 26.77%) relative to the commercial forms of MFIs (73.23%). However, the model has very high `specificity` at 96.4%. Specificity is the capacity of the model to predict that an MFI follows the commercial model (NOT an NGO) when it is following the commercial model (is NOT an NGO) [@zeng2020confusion]. Hence, it appears that commercial MFIs have distinct characters that easily allow the model to distinguish them from NGOs. The other metric of interest is the `balanced accuracy` that averages `sensitivity` and `specificity` at 60% [@gorzalczany2016multi]. Overall, the model does better than guessing that every MFI in the sample dataset follows the commercial model (or is NOT an NGO) [@hosmer2013applied]. 
 
+Figure 4 shows a visualization of the confusion matrix and the receiver operating characteristics (ROC) curve. Again these visualizations show that the model does well in `specificity`. The ROC curve plots `sensitivity` against $1 - specificity$. For an ideal model, the ROC curve would pass through the point (0,1) which is the top left corner of the curve. A model with a ROC curve being a straight line passing through the origin (the dotted line) does no better than guessing. In this case, the ROC curve shows that the model has significant explanatory power. A related metric the area under the ROC curve, called the `area under curve (AUC)` shown in table 13. AUC is the area between the ROC curve and the x-axis, with higher values of AUC corresponding to a better model. An AUC of 0.5 connotes a model that discriminates the units of analysis no better than guessing and is equivalent to the straight line passing through the origin [@mandrekar2010receiver]. The AUC in this case is 0.726 out of a possible maximum of one.  
+
 
 ```{r}
 ############################################################
@@ -1262,7 +1264,15 @@ tidy_conf_mat %>% summary() %>% kbl(., caption = "Confusion Matrix and Statistic
 my_data <- my_tidy_logit %>% predict(type = "prob", new_data = my_data) %>% bind_cols(my_data)
 
 ## ROC Area under curve
-my_data %>% roc_auc(truth = dummy, .pred_ngo)
+my_data %>% roc_auc(truth = dummy, .pred_ngo) %>% kbl(., caption = "ROC Area Under Curve (ROC AUC)", 
+      
+      booktabs = TRUE) %>% 
+  
+  kable_paper(full_width = TRUE) %>% 
+  
+  footnote(general = "Source: Authors' construction",
+           
+           general_title = "")
 
 ## Confusion matrix visualization 
 tidy_conf_mat %>% autoplot(type = "heatmap", title = "Confusion Matrix") +
@@ -1276,11 +1286,9 @@ my_data %>% roc_curve(truth = dummy, .pred_ngo) %>% autoplot(title = "ROC Curve"
 
 \newpage
 ### Multinomial Logit Model
-As noted earlier, I develop the `confusion matrix` using the `multinomial logit` with the full data (Table 13). The matrix shows that the overall `accuracy` is 56.5%. Note that the overall accuracy is one value for the entire model, the `No Information Rate (NIR)`. Overall `accuracy`, in this case, is the ability to accurately predict that an MFI is an NGO when it is an NGO, a commercial bank when it is a commercial bank, and so on. If we were to guess that every MFI in the model is the cooperative - the most prevalent legal form- we would be right 39.3% of the time, the NIR. The p-value shows that the overall `accuracy` metric is significantly different from the `NIR`. Although the multinomial logit model has a markedly lower accuracy than the logit model, it has a far more demanding task of distinguishing 5 legal forms of MFIs instead of 2 for the logit model [@kwak2002multinomial]. 
+The variables that are significant drivers of the transformation of MFIs under the logit and probit models are also significant in the multinomial logit model. We also generate the `confusion matrix` using the `multinomial logit` with the full data (Table 14). The matrix shows that the overall `accuracy` is 56.5%. Note that the overall accuracy is one value for the entire model, the `No Information Rate (NIR)`. Overall `accuracy`, in this case, is the ability to accurately predict that an MFI is an NGO when it is an NGO, a commercial bank when it is a commercial bank, and so on. If we were to guess that every MFI in the model is the cooperative - the most prevalent legal form- we would be right 39.3% of the time, the NIR. The p-value shows that the overall `accuracy` metric is significantly different from the `NIR`. Although the multinomial logit model has a markedly lower accuracy than the logit model, it has a far more demanding task of distinguishing 5 legal forms of MFIs instead of 2 for the logit model [@kwak2002multinomial]. 
 
 The model's `sensitivity` varies from a low of 47.1% for NBFI to a high of 61.8% for NGOs. The `specificity` is relatively high, ranging from 80.1% for NBFIs to 99.22% for rural banks [@ginting2019hate]. NGOs have a `specificity` of 81.4%, meaning that the model can predict that an MFI is not an NGO when it is not an NGO 81.4% of the time. For rural banks, the model can correctly predict over 99% of the time that an MFI is not a rural bank when it is not a rural bank. The `balanced accuracy` is also reasonably high, with the lowest being NBFIs at 63.9% and the highest at 79.26% for rural banks [@hedeker2003mixed]. 
-
-\newpage
 
 
 ```{r}
