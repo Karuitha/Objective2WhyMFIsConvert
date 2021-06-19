@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  17 JUN 2021 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  19 JUN 2021 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -817,9 +817,10 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 136.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 412.
+(Font)              scaled to size 12.0pt on input line 351.
+[3]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 416.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1118,8 +1119,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  15698 strings out of 481745
- 236472 string characters out of 5930830
- 534166 words of memory out of 5000000
+ 236477 string characters out of 5930830
+ 534136 words of memory out of 5000000
  30005 multiletter control sequences out of 15000+600000
  714581 words of font info for 235 fonts, out of 8000000 for 9000
  891 hyphenation exceptions out of 8191
@@ -1141,7 +1142,7 @@ r6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts
 usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on new_project_trans.pdf (37 pages, 7123381 bytes).
+Output written on new_project_trans.pdf (37 pages, 7122651 bytes).
 PDF statistics:
  691 PDF objects out of 1000 (max. 8388607)
  610 compressed objects within 7 object streams
