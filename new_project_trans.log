@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  30 JUN 2021 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.25)  5 JUL 2021 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -118,12 +118,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2019/11/07 v1.0c TeX engine tests
-)) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
@@ -324,6 +320,22 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 )
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
+)
+\cslhangindent=\skip54
+\csllabelwidth=\skip55
+\cslentryspacingunit=\skip56
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count271
+\calc@Bcount=\count272
+\calc@Adimen=\dimen159
+\calc@Bdimen=\dimen160
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count273
+\calc@Cskip=\skip59
 ) (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
@@ -332,14 +344,18 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (/usr/share/texlive/texmf-dist/tex/latex/sourcesanspro/sourcesanspro.sty
 Package: sourcesanspro 2016/12/03 v2.6 Adobe's Source Sans Pro typeface
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texl
 ive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks24
 \XKV@tempa@toks=\toks25
 )
-\XKV@depth=\count271
+\XKV@depth=\count274
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
@@ -486,65 +502,65 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 112.
 ) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen159
-\lightrulewidth=\dimen160
-\cmidrulewidth=\dimen161
-\belowrulesep=\dimen162
-\belowbottomsep=\dimen163
-\aboverulesep=\dimen164
-\abovetopsep=\dimen165
-\cmidrulesep=\dimen166
-\cmidrulekern=\dimen167
-\defaultaddspace=\dimen168
-\@cmidla=\count272
-\@cmidlb=\count273
-\@aboverulesep=\dimen169
-\@belowrulesep=\dimen170
-\@thisruleclass=\count274
-\@lastruleclass=\count275
-\@thisrulewidth=\dimen171
+\heavyrulewidth=\dimen161
+\lightrulewidth=\dimen162
+\cmidrulewidth=\dimen163
+\belowrulesep=\dimen164
+\belowbottomsep=\dimen165
+\aboverulesep=\dimen166
+\abovetopsep=\dimen167
+\cmidrulesep=\dimen168
+\cmidrulekern=\dimen169
+\defaultaddspace=\dimen170
+\@cmidla=\count275
+\@cmidlb=\count276
+\@aboverulesep=\dimen171
+\@belowrulesep=\dimen172
+\@thisruleclass=\count277
+\@lastruleclass=\count278
+\@thisrulewidth=\dimen173
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip54
-\LTright=\skip55
-\LTpre=\skip56
-\LTpost=\skip57
-\LTchunksize=\count276
-\LTcapwidth=\dimen172
+\LTleft=\skip60
+\LTright=\skip61
+\LTpre=\skip62
+\LTpost=\skip63
+\LTchunksize=\count279
+\LTcapwidth=\dimen174
 \LT@head=\box47
 \LT@firsthead=\box48
 \LT@foot=\box49
 \LT@lastfoot=\box50
-\LT@cols=\count277
-\LT@rows=\count278
-\c@LT@tables=\count279
-\c@LT@chunks=\count280
+\LT@cols=\count280
+\LT@rows=\count281
+\c@LT@tables=\count282
+\c@LT@chunks=\count283
 \LT@p@ftn=\toks26
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen173
+\col@sep=\dimen175
 \ar@mcellbox=\box51
-\extrarowheight=\dimen174
+\extrarowheight=\dimen176
 \NC@list=\toks27
-\extratabsurround=\skip58
-\backup@length=\skip59
+\extratabsurround=\skip64
+\backup@length=\skip65
 \ar@cellbox=\box52
 ) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip60
-\multirow@cntb=\count281
-\multirow@dima=\skip61
-\bigstrutjot=\dimen175
+\multirow@colwidth=\skip66
+\multirow@cntb=\count284
+\multirow@dima=\skip67
+\bigstrutjot=\dimen177
 ) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen176
-\WF@size=\dimen177
-\c@WF@wrappedlines=\count282
+\wrapoverhang=\dimen178
+\WF@size=\dimen179
+\c@WF@wrappedlines=\count285
 \WF@box=\box53
 \WF@everypar=\toks28
 Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count283
+\c@float@type=\count286
 \float@exts=\toks29
 \float@box=\box54
 \@float@everytoks=\toks30
@@ -552,39 +568,39 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 ) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks31
-\minrowclearance=\skip62
+\minrowclearance=\skip68
 ) (/usr/share/texlive/texmf-dist/tex/latex/tabu/tabu.sty
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed) + inter
 mediate FMi
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box56
-\sift@deathcycles=\count284
-\@vwid@loff=\dimen178
-\@vwid@roff=\dimen179
+\sift@deathcycles=\count287
+\@vwid@loff=\dimen180
+\@vwid@roff=\dimen181
 )
-\c@taburow=\count285
-\tabu@nbcols=\count286
-\tabu@cnt=\count287
-\tabu@Xcol=\count288
-\tabu@alloc=\count289
-\tabu@nested=\count290
-\tabu@target=\dimen180
-\tabu@spreadtarget=\dimen181
-\tabu@naturalX=\dimen182
-\tabucolX=\dimen183
-\tabu@Xsum=\dimen184
-\extrarowdepth=\dimen185
-\abovetabulinesep=\dimen186
-\belowtabulinesep=\dimen187
-\tabustrutrule=\dimen188
+\c@taburow=\count288
+\tabu@nbcols=\count289
+\tabu@cnt=\count290
+\tabu@Xcol=\count291
+\tabu@alloc=\count292
+\tabu@nested=\count293
+\tabu@target=\dimen182
+\tabu@spreadtarget=\dimen183
+\tabu@naturalX=\dimen184
+\tabucolX=\dimen185
+\tabu@Xsum=\dimen186
+\extrarowdepth=\dimen187
+\abovetabulinesep=\dimen188
+\belowtabulinesep=\dimen189
+\tabustrutrule=\dimen190
 \tabu@thebody=\toks32
 \tabu@footnotes=\toks33
 \tabu@box=\box57
 \tabu@arstrutbox=\box58
 \tabu@hleads=\box59
 \tabu@vleads=\box60
-\tabu@cellskip=\skip63
+\tabu@cellskip=\skip69
 ) (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box61
@@ -595,38 +611,23 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip64
+\TPTL@width=\skip70
 ) (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box62
 \UL@hyphenbox=\box63
-\UL@skip=\skip65
+\UL@skip=\skip71
 \UL@hook=\toks34
-\UL@height=\dimen189
-\UL@pe=\count291
-\UL@pixel=\dimen190
+\UL@height=\dimen191
+\UL@pe=\count294
+\UL@pixel=\dimen192
 \ULC@box=\box64
 Package: ulem 2019/11/18
-\ULdepth=\dimen191
+\ULdepth=\dimen193
 ) (/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen192
-\c@nlinenum=\count292
+\rotheadsize=\dimen194
+\c@nlinenum=\count295
 \TeXr@lab=\toks35
-)
-\cslhangindent=\skip66
-\csllabelwidth=\skip67
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count293
-\calc@Bcount=\count294
-\calc@Adimen=\dimen193
-\calc@Bdimen=\dimen194
-\calc@Askip=\skip68
-\calc@Bskip=\skip69
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count295
-\calc@Cskip=\skip70
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count296
@@ -653,39 +654,39 @@ LaTeX Warning: Label `' multiply defined.
 )
 \openout1 = `new_project_trans.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 111.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 114.
 LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 1
-11.
+14.
 (/usr/share/texlive/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Info: Redefining \microtypecontext on input line 111.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Info: Redefining \microtypecontext on input line 114.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 111.
+LaTeX Info: Redefining \showhyphens on input line 114.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -715,7 +716,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring OFF on input line 111.
+Package hyperref Info: Link coloring OFF on input line 114.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -725,9 +726,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count303
 )
-LaTeX Info: Redefining \ref on input line 111.
-LaTeX Info: Redefining \pageref on input line 111.
-LaTeX Info: Redefining \nameref on input line 111.
+LaTeX Info: Redefining \ref on input line 114.
+LaTeX Info: Redefining \pageref on input line 114.
+LaTeX Info: Redefining \nameref on input line 114.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -763,11 +764,11 @@ LaTeX Info: Redefining \nameref on input line 111.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 113.
+(Font)              scaled to size 17.28pt on input line 116.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 113.
+(Font)              scaled to size 12.0pt on input line 116.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-13.
+16.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
@@ -775,34 +776,34 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-13.
+16.
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-113.
+116.
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-113.
+116.
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 113.
+(Font)              <12> on input line 116.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 113.
+(Font)              <8> on input line 116.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 113.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 113
+(Font)              <6> on input line 116.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 116
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 113
+LaTeX Font Info:    Trying to load font information for U+msb on input line 116
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -810,39 +811,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 115.
+(Font)              scaled to size 10.0pt on input line 118.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 138.
+(Font)              scaled to size 14.4pt on input line 141.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 138.
+(Font)              scaled to size 14.4pt on input line 141.
 [2] [3]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 354.
+(Font)              scaled to size 12.0pt on input line 357.
 [4]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 419.
+(Font)              <10> on input line 422.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 419.
+(Font)              <7> on input line 422.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 419.
+(Font)              <5> on input line 422.
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 452.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 452.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 455.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 452.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 455.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 455.
 
 [5] [6] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
 le.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.600 \newpage
+l.603 \newpage
               ] [8]
 <new_project_trans_files/figure-latex/unnamed-chunk-7-1.pdf, id=69, 1011.78pt x
  650.43pt>
@@ -850,7 +851,7 @@ File: new_project_trans_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (
 type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-7-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-7-1
-.pdf  used on input line 606.
+.pdf  used on input line 609.
 (pdftex.def)             Requested size: 635.989pt x 408.85007pt.
 <new_project_trans_files/figure-latex/unnamed-chunk-12-1.pdf, id=70, 1011.78pt 
 x 650.43pt>
@@ -858,7 +859,7 @@ File: new_project_trans_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-12-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-12-
-1.pdf  used on input line 615.
+1.pdf  used on input line 618.
 (pdftex.def)             Requested size: 635.989pt x 408.85007pt.
 <new_project_trans_files/figure-latex/unnamed-chunk-13-1.pdf, id=71, 1011.78pt 
 x 650.43pt>
@@ -866,36 +867,36 @@ File: new_project_trans_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-13-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-13-
-1.pdf  used on input line 624.
+1.pdf  used on input line 627.
 (pdftex.def)             Requested size: 635.989pt x 408.85007pt.
 [9pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.631 \end{landscape}
+l.634 \end{landscape}
                       <./new_project_trans_files/figure-latex/unnamed-chunk-7-1
 .pdf>] [10pdfTeX warning (ext4): destination with the same identifier (name{fig
 ure.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.631 \end{landscape}
+l.634 \end{landscape}
                       <./new_project_trans_files/figure-latex/unnamed-chunk-12-
 1.pdf>] [11pdfTeX warning (ext4): destination with the same identifier (name{fi
 gure.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.631 \end{landscape}
+l.634 \end{landscape}
                       <./new_project_trans_files/figure-latex/unnamed-chunk-13-
 1.pdf>]
-Overfull \hbox (0.99934pt too wide) in paragraph at lines 712--712
+Overfull \hbox (0.99934pt too wide) in paragraph at lines 715--715
 []\T1/SourceSansPro-LF/m/n/10 (-20) education|  
  []
 
 
-Overfull \hbox (42.90329pt too wide) in paragraph at lines 712--712
+Overfull \hbox (42.90329pt too wide) in paragraph at lines 715--715
 []\T1/SourceSansPro-LF/m/n/10 (-20) gdp_growth_annual|  
  []
 
@@ -904,66 +905,66 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.733 \newpage
+l.736 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.733 \newpage
+l.736 \newpage
               
 
 
 ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 817.
+(Font)              scaled to size 8.0pt on input line 820.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 817.
+(Font)              scaled to size 6.0pt on input line 820.
 [13pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.825 
+l.828 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.825 
+l.828 
       ] [14pdfTeX warning (ext4): destination with the same identifier (name{ta
 ble.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.896 
+l.899 
       pdfTeX warning (ext4): destination with the same identifier (name{table.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.896 
+l.899 
       ] [15] [16pdfTeX warning (ext4): destination with the same identifier (na
 me{table.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1074 
+l.1077 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1074 
+l.1077 
        ] [17pdfTeX warning (ext4): destination with the same identifier (name{t
 able.10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1135 \newpage
+l.1141 \newpage
                ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 1146.
+(Font)              scaled to size 8.0pt on input line 1152.
 [18
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.11}) ha
@@ -971,10 +972,10 @@ s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1196 \end{landscape}
+l.1202 \end{landscape}
                       ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-291.
+297.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [19
@@ -984,7 +985,7 @@ le.12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1387 \begin{landscape}
+l.1393 \begin{landscape}
                         ]
 <new_project_trans_files/figure-latex/unnamed-chunk-28-1.pdf, id=221, 722.7pt x
  359.3425pt>
@@ -992,27 +993,27 @@ File: new_project_trans_files/figure-latex/unnamed-chunk-28-1.pdf Graphic file
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-28-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-28-
-1.pdf  used on input line 1405.
+1.pdf  used on input line 1411.
 (pdftex.def)             Requested size: 635.97797pt x 316.22237pt.
 [22pdfTeX warning (ext4): destination with the same identifier (name{table.13})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1413 \end{landscape}
+l.1419 \end{landscape}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1413 \end{landscape}
+l.1419 \end{landscape}
                        <./new_project_trans_files/figure-latex/unnamed-chunk-28
 -1.pdf>] [23pdfTeX warning (ext4): destination with the same identifier (name{t
 able.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1478 \newpage
+l.1484 \newpage
                
 
 
@@ -1021,7 +1022,7 @@ l.1478 \newpage
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1553 \begin{landscape}
+l.1559 \begin{landscape}
                         ]
 <new_project_trans_files/figure-latex/unnamed-chunk-33-1.pdf, id=252, 982.67125
 pt x 607.26875pt>
@@ -1029,21 +1030,21 @@ File: new_project_trans_files/figure-latex/unnamed-chunk-33-1.pdf Graphic file
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-33-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-33-
-1.pdf  used on input line 1557.
+1.pdf  used on input line 1563.
 (pdftex.def)             Requested size: 635.99979pt x 393.03357pt.
 [25pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1564 \end{landscape}
+l.1570 \end{landscape}
                        <./new_project_trans_files/figure-latex/unnamed-chunk-33
 -1.pdf>] [26pdfTeX warning (ext4): destination with the same identifier (name{t
 able.16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1609 \begin{landscape}
+l.1615 \begin{landscape}
                         
 
 
@@ -1054,14 +1055,14 @@ File: new_project_trans_files/figure-latex/unnamed-chunk-35-1.pdf Graphic file
 (type pdf)
 <use new_project_trans_files/figure-latex/unnamed-chunk-35-1.pdf>
 Package pdftex.def Info: new_project_trans_files/figure-latex/unnamed-chunk-35-
-1.pdf  used on input line 1613.
+1.pdf  used on input line 1619.
 (pdftex.def)             Requested size: 636.0077pt x 395.115pt.
 [27pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1620 \end{landscape}
+l.1626 \end{landscape}
                        <./new_project_trans_files/figure-latex/unnamed-chunk-35
 -1.pdf>] [28
 
@@ -1071,57 +1072,57 @@ ifier (name{table.17}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2221 \newpage
+l.2226 \newpage
                ] [34pdfTeX warning (ext4): destination with the same identifier
  (name{table.18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2279 \newpage
+l.2284 \newpage
                ] [35pdfTeX warning (ext4): destination with the same identifier
  (name{table.19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2338 \newpage
+l.2343 \newpage
                ] [36pdfTeX warning (ext4): destination with the same identifier
  (name{table.20}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2397 \newpage
+l.2402 \newpage
                ] [37pdfTeX warning (ext4): destination with the same identifier
  (name{table.21}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2456 \newpage
+l.2461 \newpage
                ]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 2474.
+(Font)              scaled to size 7.0pt on input line 2479.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 2475.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2480.
+(Font)              scaled to size 5.0pt on input line 2480.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2485.
 [38pdfTeX warning (ext4): destination with the same identifier (name{table.22})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2480 \end{document}
+l.2485 \end{document}
                      ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2480.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2485.
 (./new_project_trans.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2480.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2480.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2485.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2485.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15707 strings out of 481745
- 236608 string characters out of 5930830
- 532430 words of memory out of 5000000
- 30005 multiletter control sequences out of 15000+600000
+ 15708 strings out of 481745
+ 236626 string characters out of 5930830
+ 532432 words of memory out of 5000000
+ 30007 multiletter control sequences out of 15000+600000
  715055 words of font info for 239 fonts, out of 8000000 for 9000
  891 hyphenation exceptions out of 8191
  43i,15n,43p,1231b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1142,7 +1143,7 @@ r6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts
 usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on new_project_trans.pdf (38 pages, 7125121 bytes).
+Output written on new_project_trans.pdf (38 pages, 7123868 bytes).
 PDF statistics:
  695 PDF objects out of 1000 (max. 8388607)
  613 compressed objects within 7 object streams

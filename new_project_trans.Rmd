@@ -1168,7 +1168,7 @@ It is notable that for the sample data, all the MFIs operating in North Africa a
 
 ```{r, results = 'asis'}
 ## Write out the models using stargazer
-stargazer(logit_full, probit_full, logit_3, probit_3, logit_5, probit_5, logit_pooled, probit_pooled, title = "Regression Results - Logit and Probit Models [Coefficients]", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "No"), c("Deviance", "677***", "664***", "651***", "648***", "660***", "659***", "619***", "607***"), c("df", "29", "29", "29", "29", "29", "29", "9", "9"),
+stargazer(logit_full, probit_full, logit_3, probit_3, logit_5, probit_5, logit_pooled, probit_pooled, title = "Logit and Probit Models (Standard Errors in Brackets)", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "No"), c("Deviance", "677***", "664***", "651***", "648***", "660***", "659***", "619***", "607***"), c("df", "29", "29", "29", "29", "29", "29", "9", "9"),
 c("Data", "Full", "Full", ">3yrs", ">3yrs", ">5yrs", ">5yrs", "Full", "Full")), notes.align = "l")
 ```
 
@@ -1503,7 +1503,7 @@ probit_pooled_no_coop <- glm(dummy ~ age + legal_tradition +
        pcrdbgdp + stmktcap + gdp_growth_annual + factor(year), 
        data = (my_data %>% filter(currentlegalstatus != "Credit Union/ Cooperative ")), family = binomial("probit"))
 
-stargazer(logit_pooled_no_coop, probit_pooled_no_coop, title = "Regression Results - Logit and Probit Models with Data Excluding Cooperatives", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", add.lines = list(c("Year Effects", "Yes", "Yes"),                      
+stargazer(logit_pooled_no_coop, probit_pooled_no_coop, title = "Logit and Probit Models with Data Excluding Cooperatives (Standard Errors in Brackets)", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status", add.lines = list(c("Year Effects", "Yes", "Yes"),                      
 c("Deviance", "664***", "657***"), c("df", "29", "29"), c("Data", "No Credit Unions", "No Credit Unions")), notes.align = "l")
 ```
 
@@ -1513,7 +1513,7 @@ c("Deviance", "664***", "657***"), c("df", "29", "29"), c("Data", "No Credit Uni
 
 ```{r, results='asis'}
 ## Results 
-stargazer(multinom_full, title = "Regression Results - Multinomial Logit Model- Full Data", font.size = "footnotesize", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes"), c("Data", "Full", "Full", "Full", "Full", "Full")), notes.align = "l")
+stargazer(multinom_full, title = "Multinomial Logit Model- Full Data (Standard Errors in Brackets)", font.size = "footnotesize", dep.var.labels = "Dummy: Current Legal Status", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes"), c("Data", "Full", "Full", "Full", "Full", "Full")), notes.align = "l")
 ```
 
 \newpage
@@ -1521,7 +1521,7 @@ stargazer(multinom_full, title = "Regression Results - Multinomial Logit Model- 
 ## Appendix 3: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives
 ```{r, results='asis'}
 ## Results 
-stargazer(multinom_no_coop, title = "Regression Results - Multinomial Logit Model- Full Data Without Cooperatives", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes"), c("Data", "Full", "Full", "Full", "Full", "Full")), notes.align = "l")
+stargazer(multinom_no_coop, title = "Multinomial Logit Model- Full Data Without Cooperatives (Standard Errors in Brackets)", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status", add.lines = list(c("Year Effects", "Yes", "Yes", "Yes", "Yes", "Yes"), c("Data", "Full", "Full", "Full", "Full", "Full")), notes.align = "l")
 ```
 
 \newpage
@@ -1529,7 +1529,7 @@ stargazer(multinom_no_coop, title = "Regression Results - Multinomial Logit Mode
 ## Appendix 4: Multinomial Logit Model With Full Dataset But No Year Effects
 ```{r, results='asis'}
 ## Results 
-stargazer(multinom_full_ny, title = "Regression Results - Multinomial Logit Model- Full Data Without Year Effects", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", add.lines = list(c("Year Effects", "Yes", "No", "No", "No", "No"), c("Data", "No Coop", "No Coop", "No Coop", "No Coop", "No Coop")), notes.align = "l")
+stargazer(multinom_full_ny, title = "Multinomial Logit Model- Full Data Without Year Effects (Standard Errors in Brackets)", font.size = "footnotesize", header = FALSE, omit = "^factor.", dep.var.labels = "Dummy: Current Legal Status", add.lines = list(c("Year Effects", "Yes", "No", "No", "No", "No"), c("Data", "No Coop", "No Coop", "No Coop", "No Coop", "No Coop")), notes.align = "l")
 ```
 
 \newpage
@@ -1537,7 +1537,7 @@ stargazer(multinom_full_ny, title = "Regression Results - Multinomial Logit Mode
 ## Appendix 5: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives and Year Effects
 ```{r, results='asis'}
 ## Results 
-stargazer(multinom_full_no_coop_ny, title = "Regression Results - Multinomial Logit Model- Full Data Excluding Cooperatives and Year Effects", dep.var.labels = "Dummy: Current Legal Status (Standard Errors in Brackets)", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "No", "No", "No", "No", "No"), c("Data", "Full", "Full", "Full", "Full", "Full")), notes.align = "l")
+stargazer(multinom_full_no_coop_ny, title = "Multinomial Logit Model- Full Data Excluding Cooperatives and Year Effects (Standard Errors in Brackets)", dep.var.labels = "Dummy: Current Legal Status", font.size = "footnotesize", header = FALSE, omit = "^factor.", add.lines = list(c("Year Effects", "No", "No", "No", "No", "No"), c("Data", "Full", "Full", "Full", "Full", "Full")), notes.align = "l")
 ```
 
 \newpage
