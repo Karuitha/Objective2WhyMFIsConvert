@@ -1,2 +1,0 @@
-"0","# Median function"
-"0","median_n <- function(x){median(x, na.rm = TRUE)}"

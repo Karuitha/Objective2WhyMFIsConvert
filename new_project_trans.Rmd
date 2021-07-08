@@ -1261,7 +1261,7 @@ tidy_conf_mat %>% summary() %>% kbl(., caption = "Confusion Matrix and Statistic
 \newpage
 \blandscape
 
-```{r, fig.cap="Confusion Matrix and ROC Curve", fig.width=10, fig.height=5}
+```{r, fig.cap="Confusion Matrix (left) and ROC Curve", fig.width=10, fig.height=5}
 ## Generating predictions 
 my_data <- my_tidy_logit %>% predict(type = "prob", new_data = my_data) %>% bind_cols(my_data)
 
