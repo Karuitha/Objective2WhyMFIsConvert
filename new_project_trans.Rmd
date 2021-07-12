@@ -1302,27 +1302,27 @@ conf_matrix <- confusionMatrix(my_data$currentlegalstatus, multinom_predict)
 mfis <- c("NGO", "Bank", "NBFI", "Coop", "Rural Bank")
 
 ####### Metrics
-Accuracy <- c(rep(0.565, 5))
+Accuracy <- c("0.565", "-", "-", "-", "-")
 
-NoInformationRate <- rep(0.393, 5)
+NoInformationRate <- c("0.393", "-", "-", "-", "-")
 
-Kappa <- rep(0.414, 5)
+Kappa <- c(0.414, "-", "-", "-", "-")
 
-sensitivity <- c(0.618, 0.6154, 0.478, 0.584, 0.5930)
+sensitivity <- c("0.618", "0.6154", "0.478", "0.584", "0.5930")
 
-specificity <- c(0.814, 0.9298, 0.801, 0.886, 0.9922)
+specificity <- c("0.814", "0.9298", "0.801", "0.886", "0.9922")
 
-PosPredValue <- c(0.437, 0.5170, 0.474, 0.768, 0.7391)
+PosPredValue <- c("0.437", "0.5170", "0.474", "0.768", "0.7391")
 
-NegPredValue <- c(0.901, 0.9520, 0.803, 0.767, 0.9849)
+NegPredValue <- c("0.901", "0.9520", "0.803", "0.767", "0.9849")
 
-Prevalence <- c(0.189, 0.1087, 0.274, 0.393, 0.0360)
+Prevalence <- c("0.189", "0.1087", "0.274", "0.393", "0.0360")
 
-DetectionRate <- c(0.117, 0.0669, 0.131, 0.229, 0.0213)
+DetectionRate <- c("0.117", "0.0669", "0.131", "0.229", "0.0213")
 
-DetectionPrevalence <- c(0.268, 0.1294, 0.276, 0.298, 0.0289)
+DetectionPrevalence <- c("0.268", "0.1294", "0.276", "0.298", "0.0289")
 
-BalancedAccuracy <- c(0.716, 0.7726, 0.639, 0.735, 0.7926)
+BalancedAccuracy <- c("0.716", "0.7726", "0.639", "0.735", "0.7926")
  
 #####df
 df <- rbind(Accuracy, NoInformationRate, Kappa, sensitivity, specificity, PosPredValue, NegPredValue, Prevalence, DetectionRate, DetectionPrevalence, BalancedAccuracy) %>% 
@@ -1343,7 +1343,7 @@ df %>%
            
   general_title = "",
   
-  number = "Accuracy > NoInformationRate is significant at 1% confidence level, p = 0.0000",
+  number = c("Accuracy, No information rate and Kappa are the same accross the legal forms of MFIs", "Accuracy > NoInformationRate is significant at 1% confidence level, p = 0.0000"),
   
   number_title = "Notes: ")
 ```
